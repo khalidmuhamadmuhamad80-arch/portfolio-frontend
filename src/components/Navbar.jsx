@@ -18,7 +18,6 @@ function Navbar({ darkMode, setDarkMode }) {
 
   if (token) {
     try {
-      // فك التشفير بأمان للتأكد من هيكلة التوكن
       JSON.parse(atob(token.split(".")[1]));
       isLoggedIn = true;
     } catch {
@@ -26,15 +25,13 @@ function Navbar({ darkMode, setDarkMode }) {
     }
   }
 
-  // 🔄 دالة تسجيل الخروج الكاملة والآمنة
   const handleLogout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("refresh_token"); // 🔥 تم الإصلاح: مسح توكن التجديد
-    localStorage.removeItem("user");         // مسح بيانات المستخدم
+    localStorage.removeItem("refresh_token");
+    localStorage.removeItem("user");
     window.location.href = "/";
   };
 
-  // إعداد الألوان ديناميكياً بناءً على الـ Dark Mode
   const currentNavStyle = {
     ...styles.nav,
     background: darkMode ? "rgba(15, 23, 42, 0.7)" : "rgba(248, 250, 252, 0.7)",
@@ -57,7 +54,7 @@ function Navbar({ darkMode, setDarkMode }) {
       <h2 style={styles.logo}>MyPortfolio</h2>
 
       {/* Desktop Menu */}
-      <div style={styles.links}>
+      <div style={styles.links} className="nav-links">
         {["home", "about", "projects", "contact"].map((item) => (
           <a key={item} href={`#${item}`} style={currentLinkStyle}>
             {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -65,21 +62,14 @@ function Navbar({ darkMode, setDarkMode }) {
         ))}
 
         {!isLoggedIn ? (
-          <a href="/admin/login" style={styles.authBtn}>
-            Login
-          </a>
+          <a href="/admin/login" style={styles.authBtn}>Login</a>
         ) : (
           <>
-            <a href="/admin" style={styles.dashboardBtn}>
-              Dashboard
-            </a>
-            <button onClick={handleLogout} style={styles.logoutBtn}>
-              Logout
-            </button>
+            <a href="/admin" style={styles.dashboardBtn}>Dashboard</a>
+            <button onClick={handleLogout} style={styles.logoutBtn}>Logout</button>
           </>
         )}
 
-        {/* Dark Mode Button */}
         {setDarkMode && (
           <button
             onClick={() => setDarkMode(!darkMode)}
@@ -91,7 +81,7 @@ function Navbar({ darkMode, setDarkMode }) {
       </div>
 
       {/* Social Icons (Desktop) */}
-      <div style={styles.socialIcons}>
+      <div style={styles.socialIcons} className="desktop-social">
         <a href="https://github.com/khalidmuhamadmuhamad80-arch" target="_blank" rel="noreferrer" style={styles.icon}><FaGithub /></a>
         <a href="https://facebook.com" target="_blank" rel="noreferrer" style={styles.icon}><FaFacebook /></a>
         <a href="https://instagram.com/khalidmuhamadmuhamad" target="_blank" rel="noreferrer" style={styles.icon}><FaInstagram /></a>
@@ -99,7 +89,7 @@ function Navbar({ darkMode, setDarkMode }) {
       </div>
 
       {/* Burger Menu Button (Mobile) */}
-      <div style={styles.burger} onClick={() => setOpen(!open)}>
+      <div style={styles.burger} className="burger-menu" onClick={() => setOpen(!open)}>
         ☰
       </div>
 
@@ -240,7 +230,8 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     gap: "15px",
-    width: "200px",
+    width: "220px",
+    maxWidth: "90vw",
     boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
   },
   mobileLink: {

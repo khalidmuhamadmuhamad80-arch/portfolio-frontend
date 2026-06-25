@@ -6,7 +6,6 @@ function Hero() {
   const [text, setText] = useState("");
   const fullText = "Mohamed Khalid";
 
-  // 📝 تأثير الآلة الكاتبة المطور والمستقر
   useEffect(() => {
     let i = 0;
     const interval = setInterval(() => {
@@ -23,8 +22,6 @@ function Hero() {
 
   return (
     <section style={styles.hero} id="home">
-
-      {/* 🌌 جزيئات متحركة ذكية ومعتمدة بالكامل على Framer Motion بدون أخطاء CSS */}
       <div style={styles.particles}>
         {[...Array(20)].map((_, i) => {
           const randomX = Math.random() * 100;
@@ -48,12 +45,11 @@ function Hero() {
         })}
       </div>
 
-      {/* Glow Background */}
       <div style={styles.bgGlow}></div>
 
-      {/* MAIN CONTENT CARD */}
       <motion.div
         style={styles.card}
+        className="hero-card"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
@@ -66,24 +62,20 @@ function Hero() {
           transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         />
 
-        {/* NAME TYPEWRITER */}
-        <h1 style={styles.title}>
+        <h1 style={styles.title} className="responsive-title">
           {text}
           <span style={styles.cursor}>|</span>
         </h1>
 
-        {/* SUBTITLE */}
         <h2 style={styles.subtitle}>
           Backend Developer | Flask | API Engineer
         </h2>
 
-        {/* DESCRIPTION */}
         <p style={styles.description}>
           I build scalable backend systems, REST APIs, and modern web applications using Python, Flask, and SQLAlchemy.
         </p>
 
-        {/* BUTTONS */}
-        <div style={styles.buttons}>
+        <div style={styles.buttons} className="buttons-container">
           <a href="#projects" style={styles.primaryBtn}>View Projects</a>
 
           <a href="/cv.pdf" download style={styles.secondaryBtn}>
@@ -123,7 +115,7 @@ const styles = {
     top: 0,
     left: 0,
     overflow: "hidden",
-    pointerEvents: "none" // تضمن أن الجزيئات لا تحجب الضغط على الأزرار
+    pointerEvents: "none"
   },
   particle: {
     position: "absolute",
@@ -137,6 +129,7 @@ const styles = {
     zIndex: 2,
     maxWidth: "750px",
     width: "100%",
+    boxSizing: "border-box",
     textAlign: "center",
     padding: "40px 30px",
     borderRadius: "20px",
@@ -173,6 +166,8 @@ const styles = {
     WebkitTextFillColor: "transparent",
     marginBottom: "15px",
     fontWeight: "800",
+    wordBreak: "break-word",
+    overflowWrap: "break-word",
   },
   cursor: {
     color: "#a78bfa",
@@ -204,7 +199,7 @@ const styles = {
     padding: "12px 24px",
     background: "#38bdf8",
     borderRadius: "10px",
-    color: "#0f172a", // جعل الكلام داكن ليظهر بوضوح على الخلفية اللبنية
+    color: "#0f172a",
     textDecoration: "none",
     fontWeight: "600",
     transition: "transform 0.2s"

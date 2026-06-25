@@ -1,57 +1,29 @@
+/* --- الإعدادات الأساسية --- */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: #0f172a;
   color: white;
+  overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي عند وجود عناصر زائدة */
 }
 
-/* smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* navbar glass */
+/* --- الناف بار (Navbar) --- */
 nav {
-  backdrop-filter: blur(10px);
-  background: rgba(17, 24, 39, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  backdrop-filter: blur(15px);
+  transition: background 0.3s, border-bottom 0.3s;
 }
 
-/* links */
-a {
-  color: white;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  color: #38bdf8;
-}
-
-/* buttons */
-button {
-  transition: 0.3s;
-  border-radius: 8px;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #38bdf8;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.card-hover:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
-}
 nav a {
   color: white;
   text-decoration: none;
@@ -64,7 +36,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* underline animation */
+/* أنيميشن الخط السفلي */
 nav a::after {
   content: "";
   position: absolute;
@@ -79,25 +51,77 @@ nav a::after {
 nav a:hover::after {
   width: 100%;
 }
-@media (max-width: 768px) {
-  nav div {
-    display: none;
-  }
 
-  nav div:last-child {
-    display: flex;
+/* --- الأزرار --- */
+button {
+  transition: 0.3s;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+/* --- التأثيرات والأنيميشن --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+}
+
+/* --- التجاوب مع الشاشات (RESPONSIVE SETTINGS) --- */
+
+/* للشاشات الكبيرة: نخفي زر الـ Burger */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none !important;
   }
 }
-@keyframes floatUp {
-  0% {
-    transform: translateY(100vh);
-    opacity: 0;
+
+/* للموبايل والأجهزة اللوحية */
+@media (max-width: 768px) {
+  /* 1. إدارة القائمة في الموبايل */
+  .nav-links,
+  .desktop-social {
+    display: none !important;
   }
-  50% {
-    opacity: 1;
+
+  /* 2. إظهار زر الـ Burger */
+  .burger-menu {
+    display: block !important;
   }
-  100% {
-    transform: translateY(-10vh);
-    opacity: 0;
+
+  /* 3. تنسيق بطاقة الـ Hero */
+  .hero-card {
+    padding: 20px 15px !important;
+    width: 95% !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* 4. معالجة النص */
+  .responsive-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+
+  /* 5. ترتيب الأزرار في الـ Hero عمودياً */
+  .buttons-container {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
 }
