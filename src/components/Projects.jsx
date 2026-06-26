@@ -13,7 +13,7 @@ function Projects() {
     setProjects([{
       id: 1,
       title: "Personal Portfolio",
-      image_url: "/me.jpg" // ضع رابط صورتك هنا
+      image_url: "/overview.png" // ضع رابط صورتك هنا
     }]);
   }, []);
 
