@@ -13,34 +13,35 @@ function About() {
         <h2 style={styles.title}>About Me</h2>
 
         <p style={styles.text}>
-          I am a Backend Developer specializing in building scalable web
-          applications and REST APIs using Python, Flask, and SQLAlchemy.
-          I enjoy solving real-world problems and turning ideas into
-          efficient digital systems.
+          I am a Full Stack Developer dedicated to building end-to-end web 
+          solutions. I bridge the gap between intuitive, responsive frontend 
+          interfaces and robust, secure backend architectures, ensuring a 
+          seamless experience from the database to the browser.
         </p>
 
         <div style={styles.grid}>
           <div style={styles.card}>
-            <h3>👨‍💻 Who I Am</h3>
+            <h3>🌐 Frontend Mastery</h3>
             <p>
-              A passionate developer focused on backend systems and API
-              development with clean architecture.
+              Crafting interactive and high-performance user interfaces using 
+              React, focusing on clean design and fluid user experiences.
             </p>
           </div>
 
           <div style={styles.card}>
-            <h3>⚙️ Skills</h3>
+            <h3>⚙️ Backend Expertise</h3>
             <p>
-              Python, Flask, SQLAlchemy, REST APIs, Git, Linux basics,
-              and database design.
+              Architecting secure and scalable APIs with Python and Flask. 
+              Experienced in JWT authentication, CORS handling, and database management.
             </p>
           </div>
 
           <div style={styles.card}>
-            <h3>🚀 Goals</h3>
+            <h3>🚀 Development Philosophy</h3>
             <p>
-              To become a professional backend engineer and work on
-              large-scale real-world systems.
+              I believe in writing clean, modular code. My goal is to build 
+              full-stack applications that are not only functional but also 
+              maintainable and secure.
             </p>
           </div>
         </div>
@@ -50,44 +51,18 @@ function About() {
 }
 
 const styles = {
-  section: {
-    padding: "80px 20px",
-    display: "flex",
-    justifyContent: "center",
-  },
-
-  container: {
-    maxWidth: "1000px",
-    textAlign: "center",
-  },
-
-  title: {
-    fontSize: "40px",
-    marginBottom: "20px",
-    color: "#38bdf8",
-  },
-
-  text: {
-    fontSize: "18px",
-    color: "#cbd5e1",
-    lineHeight: "1.8",
-    marginBottom: "40px",
-  },
-
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
-  },
-
+  section: { padding: "80px 20px", display: "flex", justifyContent: "center" },
+  container: { maxWidth: "1000px", textAlign: "center" },
+  title: { fontSize: "40px", marginBottom: "20px", color: "#38bdf8" },
+  text: { fontSize: "18px", color: "#cbd5e1", lineHeight: "1.8", marginBottom: "40px", maxWidth: "800px", margin: "0 auto 40px auto" },
+  grid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "25px" },
   card: {
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
+    background: "rgba(255,255,255,0.03)",
+    border: "1px solid rgba(56, 189, 248, 0.2)",
     borderRadius: "15px",
-    padding: "20px",
+    padding: "25px",
     backdropFilter: "blur(10px)",
-    transition: "0.3s",
-    cursor: "pointer",
+    transition: "transform 0.3s ease, border 0.3s ease",
   },
 };
 

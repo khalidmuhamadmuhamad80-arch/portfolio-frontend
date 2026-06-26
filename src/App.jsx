@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/contact";
+import ProjectDetails from "./components/ProjectDetails"; // تم استيراده
 
 // ⚠️ تأكد أن اسم الملف في مجلد pages هو AdminLogin.jsx وليس Login.jsx
 import AdminLogin from "./pages/AdminLogin";
@@ -27,26 +28,21 @@ function Home({ darkMode, setDarkMode }) {
 }
 
 function App() {
-  // تذكر الحالة المفضلة للمستخدم حتى عند إعادة تحميل الصفحة
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
     return saved !== null ? JSON.parse(saved) : true;
   });
 
-  // حفظ التغييرات في المتصفح تلقائياً
   useEffect(() => {
     localStorage.setItem("darkMode", JSON.stringify(darkMode));
   }, [darkMode]);
 
-  // 🔥 اختبار الاتصال بالسيرفر (الباك إند) عند تشغيل التطبيق
   useEffect(() => {
     const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
-
     fetch(`${BASE_URL}/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("✅ Backend connected successfully:");
-        console.log(data);
+        console.log("✅ Backend connected successfully:", data);
       })
       .catch((err) => {
         console.error("❌ Backend connection failed:", err);
@@ -54,7 +50,6 @@ function App() {
   }, []);
 
   return (
-    // تطبيق الاستايل هنا يضمن أن الخلفية ستشمل كل المسارات والصفحات بدون عيوب بصرية
     <div style={darkMode ? styles.dark : styles.light}>
       <BrowserRouter>
         <Routes>
@@ -63,6 +58,9 @@ function App() {
             path="/"
             element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}
           />
+
+          {/* 📑 مسار تفاصيل المشروع */}
+          <Route path="/project/:id" element={<ProjectDetails />} />
 
           {/* 🔐 مسار تسجيل دخول المسؤول */}
           <Route path="/admin/login" element={<AdminLogin />} />
@@ -90,7 +88,7 @@ const styles = {
     background: "#0f172a",
     color: "white",
     minHeight: "100vh",
-    transition: "background 0.3s ease, color 0.3s ease" // حركة ناعمة عند التحويل بين الأوضاع
+    transition: "background 0.3s ease, color 0.3s ease"
   },
   light: {
     background: "#f8fafc",
