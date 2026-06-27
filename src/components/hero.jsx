@@ -68,12 +68,14 @@ function Hero() {
         </h1>
 
         <h2 style={styles.subtitle}>
-          Backend Developer | Flask | API Engineer
+           Full Stack Developer | React | Flask
         </h2>
 
         <p style={styles.description}>
-          I build scalable backend systems, REST APIs, and modern web applications using Python, Flask, and SQLAlchemy.
+           I am a Full Stack Developer specializing in building modern, scalable web applications. On the backend, I work with Python, Flask, PostgreSQL, SQLAlchemy, JWT Authentication, Flask-CORS, and Marshmallow to create secure and reliable REST APIs. On the frontend, I build responsive and interactive user interfaces using React.
         </p>
+
+
 
         <div style={styles.buttons} className="buttons-container">
           <a href="#projects" style={styles.primaryBtn}>View Projects</a>
