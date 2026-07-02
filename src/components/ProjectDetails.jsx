@@ -10,7 +10,7 @@ function ProjectDetails() {
     {
       title: "Project Overview",
       text: "This personal portfolio project is a full-stack web application designed to showcase my technical skills and professional journey. It focuses on providing a seamless, responsive, and high-performance user experience, bridging the gap between elegant frontend design and robust backend functionality.",
-      img: "/overview.png"
+      img: "/footr.png"
     },
     {
       title: "Navigation & User Experience",

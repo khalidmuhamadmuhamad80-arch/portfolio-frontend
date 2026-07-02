@@ -30,7 +30,7 @@ function NovaCartDetails() {
         <p style={styles.text}>
           The platform includes a comprehensive administrative dashboard that enables efficient management of products, users, orders, and inventory. It provides administrators with complete control over the entire system through a clean and intuitive interface, making daily operations faster, more organized, and easier to manage.
         </p>
-        <img src="/Dashboard.png" style={styles.image} onError={(e) => {e.target.style.display = 'none'}} />
+        <img src="/mohmad.png" style={styles.image} onError={(e) => {e.target.style.display = 'none'}} />
         <hr style={styles.divider} />
       </section>
 
