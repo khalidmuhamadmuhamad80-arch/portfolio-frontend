@@ -15,12 +15,12 @@ function ProjectDetails() {
     {
       title: "Navigation & User Experience",
       text: "The platform features an intuitive navigation bar with smooth transitions. It includes a secure authentication system for administrative access and a dynamic Dark/Light mode toggle, allowing users to customize their browsing experience based on their environment.",
-      img: "/navbar.png"
+      img: "/about.png"
     },
     {
       title: "Admin Dashboard",
       text: "The custom-built dashboard provides full control over project management. It allows for secure content updates, providing an efficient way to monitor site activity while ensuring that sensitive operations are protected behind protected routes.",
-      img: "/dashboard.png"
+      img: "/dash.png"
     },
     {
       title: "Communication Systems",

@@ -12,7 +12,7 @@ function Projects() {
       {
         id: 1,
         title: "Personal Portfolio",
-        image_url: "/overview.png"
+        image_url: "/footr.png"
       },
       {
         id: 2,
