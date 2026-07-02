@@ -6,7 +6,8 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/contact";
-import ProjectDetails from "./components/ProjectDetails"; // تم استيراده
+import ProjectDetails from "./components/ProjectDetails";
+import NovaCartDetails from "./components/NovaCartDetails"; // تم إضافة هذا الاستيراد
 
 // ⚠️ تأكد أن اسم الملف في مجلد pages هو AdminLogin.jsx وليس Login.jsx
 import AdminLogin from "./pages/AdminLogin";
@@ -59,8 +60,9 @@ function App() {
             element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}
           />
 
-          {/* 📑 مسار تفاصيل المشروع */}
-          <Route path="/project/:id" element={<ProjectDetails />} />
+          {/* 📑 مسارات تفاصيل المشاريع */}
+          <Route path="/project/1" element={<ProjectDetails />} />
+          <Route path="/project/2" element={<NovaCartDetails />} />
 
           {/* 🔐 مسار تسجيل دخول المسؤول */}
           <Route path="/admin/login" element={<AdminLogin />} />

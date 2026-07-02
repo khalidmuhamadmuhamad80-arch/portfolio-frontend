@@ -6,15 +6,20 @@ function Projects() {
   const [projects, setProjects] = useState([]);
   const [hoveredId, setHoveredId] = useState(null);
   const navigate = useNavigate();
-  const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
   useEffect(() => {
-    // محاكاة لجلب مشروعك الحالي (بما أن لديك مشروع واحد فقط)
-    setProjects([{
-      id: 1,
-      title: "Personal Portfolio",
-      image_url: "/overview.png" // ضع رابط صورتك هنا
-    }]);
+    setProjects([
+      {
+        id: 1,
+        title: "Personal Portfolio",
+        image_url: "/overview.png"
+      },
+      {
+        id: 2,
+        title: "NovaCart | React & Flask E-commerce Platform",
+        image_url: "/NovaCart.png" // تأكد من تحديث اسم الصورة لاحقاً إذا أردت
+      }
+    ]);
   }, []);
 
   return (
@@ -30,11 +35,11 @@ function Projects() {
               onMouseLeave={() => setHoveredId(null)}
               onClick={() => navigate(`/project/${p.id}`)}
               whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <img src={p.image_url} alt={p.title} style={styles.image} />
-              
-              {/* تأثير الـ Overlay */}
-              <motion.div 
+
+              <motion.div
                 style={styles.overlay}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: hoveredId === p.id ? 1 : 0 }}
@@ -50,20 +55,39 @@ function Projects() {
 }
 
 const styles = {
-  section: { padding: "80px 20px", display: "flex", justifyContent: "center" },
-  container: { maxWidth: "600px", width: "100%", textAlign: "center" }, // عرض أصغر ليناسب كرت واحد
-  title: { fontSize: "40px", color: "#38bdf8", marginBottom: "40px" },
-  grid: { display: "flex", justifyContent: "center" },
+  section: {
+    padding: "80px 20px",
+    display: "flex",
+    justifyContent: "center"
+  },
+  container: {
+    maxWidth: "800px", // زدنا العرض قليلاً ليتناسب مع الشاشات الكبيرة
+    width: "100%",
+    textAlign: "center"
+  },
+  title: {
+    fontSize: "clamp(30px, 5vw, 40px)", // الخط يتغير حجمه تلقائياً حسب حجم الشاشة
+    color: "#38bdf8",
+    marginBottom: "40px"
+  },
+  grid: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "30px",
+    width: "100%"
+  },
   card: {
     position: "relative",
     borderRadius: "20px",
     overflow: "hidden",
     cursor: "pointer",
     width: "100%",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
   },
   image: {
     width: "100%",
-    height: "350px",
+    height: "auto", // جعلنا الارتفاع تلقائي ليحافظ على نسبة الصورة (Aspect Ratio)
+    aspectRatio: "16/9", // يضمن أن الصورة لن يتم قصها بشكل سيء
     objectFit: "cover",
     display: "block"
   },
@@ -73,15 +97,17 @@ const styles = {
     left: 0,
     width: "100%",
     height: "100%",
-    background: "rgba(0, 0, 0, 0.6)", // خلفية سوداء نصف شفافة
+    background: "rgba(0, 0, 0, 0.7)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    padding: "20px"
   },
   overlayText: {
     color: "#fff",
-    fontSize: "24px",
-    fontWeight: "bold"
+    fontSize: "clamp(18px, 3vw, 24px)", // حجم الخط يتناسب مع الشاشة
+    fontWeight: "bold",
+    textAlign: "center"
   }
 };
 

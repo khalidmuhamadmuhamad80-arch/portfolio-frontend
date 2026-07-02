@@ -1,9 +1,9 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowLeft } from "react-icons/fa";
 
 function ProjectDetails() {
-  const { id } = useParams();
+
   const navigate = useNavigate();
 
   const sections = [
