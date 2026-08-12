@@ -18,12 +18,12 @@
   box-sizing: border-box;
 
   /* Transparent Glass Effect */
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-  border-bottom: 1px solid rgba(36, 34, 40, 0.08);
+  border-bottom: 1px solid rgba(36, 34, 40, 0.012);
 
   transition:
     background 0.3s ease,
@@ -90,7 +90,7 @@
 
   padding: 9px 15px;
 
-  background: #dcd6f7;
+  background: #cd41c6;
 
   border-radius: 10px;
 
@@ -172,7 +172,7 @@
 
   padding: 9px 15px;
 
-  background: #dcd6f7;
+  background: #cd41c6;
 
   border: none;
 
@@ -338,7 +338,7 @@
 
   padding: 9px 13px;
 
-  background: #dcd6f7;
+  background: #cd41c6;
 
   border-radius: 9px;
 
@@ -492,7 +492,7 @@
 
   padding: 9px 13px;
 
-  background: #dcd6f7;
+  background: #cd41c6;
 
   border-radius: 9px;
 
