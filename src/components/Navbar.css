@@ -309,30 +309,8 @@
 }
 
 
-/* Orange underline */
 
-.dropdown-link::after {
-  content: "";
 
-  position: absolute;
-
-  left: 13px;
-  right: 13px;
-
-  bottom: 5px;
-
-  height: 2px;
-
-  background: #f28c5b;
-
-  border-radius: 10px;
-
-  transform: scaleX(0);
-
-  transform-origin: center;
-
-  transition: transform 0.25s ease;
-}
 
 
 /* Hover */
@@ -340,7 +318,7 @@
 .dropdown-link:hover {
   transform: scale(1.04);
 
-  background: #d5cef3;
+  background:#36df45 ;
 
   box-shadow:
     0 5px 14px rgba(118, 103, 168, 0.14);

@@ -6,20 +6,25 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  // Main navigation links
-  const navigationLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-  ];
+// Main navigation links
+const navigationLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+  { name: "Social Media", href: "#social-media" },
+];
 
-  // Dropdown links
-  const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Contact", href: "#contact" },
-    { name: "Skills", href: "#skills" },
-    { name: "Social Media", href: "#social-media" },
-  ];
+// Dropdown links
+const quickLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+  { name: "Social Media", href: "#social-media" },
+];
 
   return (
     <motion.nav
