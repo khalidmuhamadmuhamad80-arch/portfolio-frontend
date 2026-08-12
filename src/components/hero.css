@@ -27,7 +27,7 @@
   width: min(1120px, 100%);
 
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
 
   gap: 70px;
@@ -76,6 +76,17 @@
   z-index: 0;
 
   pointer-events: none;
+}
+.hero-card {
+
+  grid-template-areas: "content image";
+}
+.hero-image-wrapper {
+  grid-area: image;
+}
+
+.hero-content {
+  grid-area: content;
 }
 
 
