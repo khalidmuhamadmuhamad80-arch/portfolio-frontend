@@ -1,110 +1,130 @@
 import { motion } from "framer-motion";
+import "./Skills.css";
 
 function Skills() {
-  const skills = [
-    { name: "Python", level: 90 },
-    { name: "Flask", level: 85 },
-    { name: "SQLAlchemy", level: 80 },
-    { name: "REST API", level: 88 },
-    { name: "JWT Authentication", level: 85 },
-    { name: "PostgreSQL", level: 82 },
-    { name: "Marshmallow", level: 80 },
-    { name: "Flask-CORS", level: 80 },
-    { name: "React", level: 85 },
-    { name: "JavaScript", level: 82 },
-    { name: "HTML", level: 95 },
-    { name: "CSS", level: 90 },
-    { name: "Git / GitHub", level: 75 },
-    { name: "Database Design", level: 82 },
+  const skillCategories = [
+    {
+      number: "01",
+      title: "Backend Development",
+      description: "Building reliable and scalable server-side applications.",
+      skills: [
+        "Python",
+        "Django",
+        "Flask",
+        "REST APIs",
+        "PostgreSQL",
+        "SQLAlchemy",
+      ],
+    },
+    {
+      number: "02",
+      title: "Frontend Development",
+      description: "Creating modern, responsive, and interactive interfaces.",
+      skills: [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Responsive Design",
+        "UI Development",
+      ],
+    },
+    {
+      number: "03",
+      title: "Soft Skills",
+      description: "Personal skills that support effective and professional work.",
+      skills: [
+        "Problem Solving",
+        "Communication",
+        "Continuous Learning",
+        "Attention to Detail",
+        "Adaptability",
+        "Teamwork",
+      ],
+    },
+    {
+      number: "04",
+      title: "Business & Professional",
+      description: "Skills that help turn ideas into useful digital solutions.",
+      skills: [
+        "Client Communication",
+        "Requirement Analysis",
+        "Project Planning",
+        "Time Management",
+        "Collaboration",
+        "Understanding Business Needs",
+      ],
+    },
   ];
 
   return (
-    <section style={styles.section} id="skills">
+    <section className="skills" id="skills">
       <motion.div
-        style={styles.container}
-        initial={{ opacity: 0, y: 40 }}
+        className="skills-container"
+        initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <h2 style={styles.title}>Skills</h2>
+        {/* Section Heading */}
+        <div className="skills-heading">
+          <p className="skills-label">MY SKILLS</p>
 
-        <div style={styles.grid}>
-          {skills.map((skill, index) => (
-            <div key={index} style={styles.skillBox}>
-              <div style={styles.skillHeader}>
-                <span>{skill.name}</span>
-                <span>{skill.level}%</span>
+          <h2 className="skills-title">
+            Explore My <span>Skills</span>
+          </h2>
+
+          <p className="skills-intro">
+            A combination of technical knowledge, creative thinking, and
+            professional skills I use to build meaningful digital experiences.
+          </p>
+        </div>
+
+        {/* Skills Cards */}
+        <div className="skills-grid">
+          {skillCategories.map((category, index) => (
+            <motion.article
+              key={category.number}
+              className="skill-card"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+            >
+              <div className="skill-card-top">
+                <span className="skill-number">
+                  {category.number}
+                </span>
               </div>
 
-              <div style={styles.barBg}>
-                <motion.div
-                  style={{
-                    ...styles.barFill,
-                    width: `${skill.level}%`,
-                  }}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1 }}
-                />
+              <h3 className="skill-card-title">
+                {category.title}
+              </h3>
+
+              <p className="skill-card-description">
+                {category.description}
+              </p>
+
+              <div className="skill-list">
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="skill-item"
+                  >
+                    <span className="skill-dot"></span>
+                    {skill}
+                  </span>
+                ))}
               </div>
-            </div>
+            </motion.article>
           ))}
         </div>
       </motion.div>
     </section>
   );
 }
-
-const styles = {
-  section: {
-    padding: "80px 20px",
-    display: "flex",
-    justifyContent: "center",
-  },
-
-  container: {
-    maxWidth: "900px",
-    width: "100%",
-    textAlign: "center",
-  },
-
-  title: {
-    fontSize: "40px",
-    color: "#38bdf8",
-    marginBottom: "40px",
-  },
-
-  grid: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "20px",
-  },
-
-  skillBox: {
-    textAlign: "left",
-  },
-
-  skillHeader: {
-    display: "flex",
-    justifyContent: "space-between",
-    marginBottom: "8px",
-    color: "white",
-  },
-
-  barBg: {
-    width: "100%",
-    height: "10px",
-    background: "#1f2937",
-    borderRadius: "10px",
-    overflow: "hidden",
-  },
-
-  barFill: {
-    height: "100%",
-    background: "#38bdf8",
-    borderRadius: "10px",
-  },
-};
 
 export default Skills;

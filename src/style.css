@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #0f172a;
+ 
   color: white;
   overflow-x: hidden; /* يمنع ظهور شريط التمرير الأفقي عند وجود عناصر زائدة */
 }
