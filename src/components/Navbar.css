@@ -353,11 +353,7 @@
     transform 0.25s ease;
 }
 
-.burger-menu:hover {
-  color: #f28c5b;
 
-  transform: scale(1.05);
-}
 
 
 /* =========================================
@@ -443,26 +439,7 @@
 
 /* Orange underline */
 
-.mobile-link::after {
-  content: "";
 
-  position: absolute;
-
-  left: 13px;
-  right: 13px;
-
-  bottom: 5px;
-
-  height: 2px;
-
-  background: #f28c5b;
-
-  border-radius: 10px;
-
-  transform: scaleX(0);
-
-  transition: transform 0.25s ease;
-}
 
 .mobile-link:hover {
   transform: scale(1.04);
