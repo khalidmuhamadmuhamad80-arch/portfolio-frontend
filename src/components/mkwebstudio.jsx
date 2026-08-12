@@ -19,6 +19,11 @@ function MKWebStudio() {
         description:
           "Used to build the backend, manage application logic, handle data, and provide the required API functionality.",
       },
+      {
+        name: "React",
+        description:
+          "Used to build the frontend interface and create a responsive and interactive user experience.",
+      },
     ],
 
     github:
@@ -37,7 +42,7 @@ function MKWebStudio() {
   return (
     <main className="mk-web-studio">
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="mk-project-hero">
         <motion.div
           className="mk-project-container mk-project-hero-content"
@@ -56,6 +61,45 @@ function MKWebStudio() {
           <p className="mk-project-short-description">
             {project.shortDescription}
           </p>
+
+          {/* Technologies */}
+          <div className="mk-project-hero-technologies">
+            {project.technologies.map((technology) => (
+              <span key={technology.name}>
+                {technology.name}
+              </span>
+            ))}
+          </div>
+
+          {/* Project Links */}
+          <div className="mk-project-hero-links">
+
+            {project.liveDemo && (
+              <a
+                href={project.liveDemo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mk-project-link"
+              >
+                <span>Visit Live Website</span>
+                <FaExternalLinkAlt />
+              </a>
+            )}
+
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mk-project-link"
+              >
+                <FaGithub />
+                <span>View on GitHub</span>
+                <FaExternalLinkAlt />
+              </a>
+            )}
+
+          </div>
         </motion.div>
       </section>
 
@@ -82,7 +126,7 @@ function MKWebStudio() {
         </motion.div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Technologies */}
       <section className="mk-project-technologies-section">
         <motion.div
           className="mk-project-container"
@@ -105,7 +149,9 @@ function MKWebStudio() {
                 className="mk-project-technology"
                 key={technology.name}
               >
-                <h3>{technology.name}</h3>
+                <h3>
+                  {technology.name}
+                </h3>
 
                 <p>
                   {technology.description}
@@ -116,62 +162,7 @@ function MKWebStudio() {
         </motion.div>
       </section>
 
-      {/* Project Links */}
-      <section className="mk-project-links-section">
-        <motion.div
-          className="mk-project-container"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="mk-project-label">
-            PROJECT LINKS
-          </p>
-
-          <h2 className="mk-project-section-title">
-            Explore the Project
-          </h2>
-
-          <div className="mk-project-links">
-
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link github-link"
-              >
-                <FaGithub />
-
-                <span>
-                  View on GitHub
-                </span>
-
-                <FaExternalLinkAlt />
-              </a>
-            )}
-
-            {project.liveDemo && (
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link live-link"
-              >
-                <span>
-                  Visit Live Website
-                </span>
-
-                <FaExternalLinkAlt />
-              </a>
-            )}
-
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Project Gallery */}
+      {/* Gallery */}
       <section className="mk-project-gallery-section">
         <motion.div
           className="mk-project-container"
@@ -211,4 +202,5 @@ function MKWebStudio() {
 }
 
 export default MKWebStudio;
+
 
