@@ -11,7 +11,7 @@ import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import MKWebStudio from "./components/mkwebstudio";
-
+import LibraryManagement from "./components/library-management";
 // 🏠 Home Page Component
 function Home() {
   return (
@@ -79,6 +79,10 @@ function App() {
             <Route
               path="/projects/mk-web-studio"
               element={<MKWebStudio />}
+           />
+            <Route
+              path="/projects/library-management"
+              element={<LibraryManagement />}
            />
 
 

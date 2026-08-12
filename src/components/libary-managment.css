@@ -1,0 +1,588 @@
+
+/* =========================================
+   MAIN PROJECT PAGE
+========================================= */
+
+.mk-web-studio {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f6f2;
+  color: #242228;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.mk-project-container {
+  width: min(1120px, 90%);
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.mk-project-hero {
+  width: 100%;
+  min-height: calc(100vh - 78px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 5%;
+  box-sizing: border-box;
+
+  background: #f8f6f2;
+}
+
+
+/* =========================================
+   HERO CARD
+========================================= */
+
+.mk-project-hero-content {
+  position: relative;
+
+  width: min(1120px, 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 55px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(36, 34, 40, 0.08);
+
+  border-radius: 32px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 70px rgba(36, 34, 40, 0.09);
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   HERO DECORATION
+========================================= */
+
+.mk-project-hero-content::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: -150px;
+  left: -120px;
+
+  background: #dcd6f7;
+
+  border-radius: 50%;
+
+  opacity: 0.55;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+.mk-project-hero-content::after {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  right: -100px;
+  bottom: -120px;
+
+  background: #cd41c6;
+
+  border-radius: 50%;
+
+  opacity: 0.25;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PROJECT LABEL
+========================================= */
+
+.mk-project-label {
+  margin: 0 0 12px;
+
+  color: #cd41c6;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   PROJECT TITLE
+========================================= */
+
+.mk-project-title {
+  margin: 0;
+
+  color: #242228;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -2.5px;
+}
+
+
+/* =========================================
+   SHORT DESCRIPTION
+========================================= */
+
+.mk-project-short-description {
+  max-width: 600px;
+
+  margin: 22px 0 0;
+
+  color: #5c5650;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   HERO TECHNOLOGIES
+========================================= */
+
+.mk-project-hero-technologies {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.mk-project-hero-technologies span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 17px;
+
+  color: #242228;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  border: 1px solid rgba(36, 34, 40, 0.1);
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.mk-project-hero-links {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  margin-top: 32px;
+}
+
+
+/* =========================================
+   BASE BUTTON
+========================================= */
+
+.mk-project-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-width: 150px;
+
+  padding: 12px 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  background: #cd41c6;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.mk-project-link:hover {
+  transform: translateY(-2px) scale(1.02);
+
+  background: #36df45;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(36, 34, 40, 0.15);
+}
+
+
+/* =========================================
+   DESCRIPTION SECTION
+========================================= */
+
+.mk-project-description-section,
+.mk-project-technologies-section,
+.mk-project-gallery-section {
+  width: 100%;
+
+  padding: 90px 0;
+
+  background: #f8f6f2;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.mk-project-section-title {
+  margin: 0;
+
+  color: #242228;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.8px;
+}
+
+
+/* =========================================
+   PROJECT DESCRIPTION
+========================================= */
+
+.mk-project-description {
+  max-width: 800px;
+
+  margin: 24px 0 0;
+
+  color: #5c5650;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   TECHNOLOGIES SECTION
+========================================= */
+
+.mk-project-technologies-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-top: 40px;
+}
+
+.mk-project-technology {
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(36, 34, 40, 0.08);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 40px rgba(36, 34, 40, 0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.mk-project-technology:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 45px rgba(36, 34, 40, 0.09);
+}
+
+.mk-project-technology h3 {
+  margin: 0;
+
+  color: #242228;
+
+  font-size: 24px;
+
+  font-weight: 800;
+}
+
+.mk-project-technology p {
+  margin: 14px 0 0;
+
+  color: #5c5650;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.mk-project-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  margin-top: 40px;
+}
+
+.mk-project-gallery-item {
+  position: relative;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(36, 34, 40, 0.08);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 50px rgba(36, 34, 40, 0.08);
+}
+
+.mk-project-gallery-item img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.mk-project-gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .mk-project-hero {
+    padding: 55px 4%;
+  }
+
+  .mk-project-hero-content {
+    padding: 55px 42px;
+  }
+
+  .mk-project-title {
+    font-size: clamp(40px, 6vw, 58px);
+  }
+
+  .mk-project-description-section,
+  .mk-project-technologies-section,
+  .mk-project-gallery-section {
+    padding: 75px 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .mk-project-hero {
+    min-height: auto;
+
+    padding: 45px 5%;
+  }
+
+  .mk-project-hero-content {
+    padding: 45px 25px;
+
+    border-radius: 26px;
+  }
+
+  .mk-project-title {
+    font-size: clamp(38px, 11vw, 52px);
+
+    letter-spacing: -2px;
+  }
+
+  .mk-project-short-description {
+    font-size: 15px;
+  }
+
+  .mk-project-hero-links {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+  .mk-project-technologies-list {
+    grid-template-columns: 1fr;
+  }
+
+  .mk-project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .mk-project-description-section,
+  .mk-project-technologies-section,
+  .mk-project-gallery-section {
+    padding: 65px 0;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .mk-project-container {
+    width: 92%;
+  }
+
+  .mk-project-hero {
+    padding: 30px 4%;
+  }
+
+  .mk-project-hero-content {
+    padding: 38px 20px;
+
+    border-radius: 22px;
+  }
+
+  .mk-project-title {
+    font-size: 40px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .mk-project-short-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .mk-project-hero-technologies {
+    gap: 8px;
+  }
+
+  .mk-project-hero-links {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .mk-project-link {
+    width: 100%;
+  }
+
+  .mk-project-section-title {
+    font-size: 32px;
+  }
+
+  .mk-project-description {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .mk-project-technology {
+    padding: 25px;
+  }
+}
+
