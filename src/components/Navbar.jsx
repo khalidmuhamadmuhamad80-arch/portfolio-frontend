@@ -102,6 +102,16 @@ function Navbar() {
       >
         ☰
       </button>
+      {quickLinks.map((item) => (
+     <a
+        key={item.name}
+        href={item.href}
+        className="mobile-link"
+        onClick={() => setOpen(false)}
+      >
+        {item.name}
+      </a>
+     ))}
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -112,29 +122,7 @@ function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
           >
-            {navigationLinks.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="mobile-link"
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
 
-            <div className="mobile-divider" />
-
-            {quickLinks.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="mobile-link"
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
           </motion.div>
         )}
       </AnimatePresence>

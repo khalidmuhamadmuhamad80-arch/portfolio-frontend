@@ -101,7 +101,7 @@
   right: -100px;
   bottom: -120px;
 
-  background: #c98291;
+  background: #cd41c6;
 
   border-radius: 50%;
 
@@ -217,7 +217,7 @@
 .hero-greeting {
   margin: 0 0 8px;
 
-  color: #7667a8;
+  color:#cd41c6;
 
   font-size: 15px;
 
@@ -521,5 +521,33 @@
     width: 100%;
 
     box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  .hero-card {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: auto;
+    padding: 35px 20px;
+  }
+
+  .hero-content {
+    order: 1;
+    width: 100%;
+  }
+
+  .hero-image-wrapper {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
   }
 }
