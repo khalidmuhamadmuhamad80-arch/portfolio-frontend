@@ -1,41 +1,15 @@
+
 import { motion } from "framer-motion";
 import "./Projects.css";
 
 function Projects() {
-  const projects = [
-    {
-      id: 1,
-      title: "NovaCart",
-      technologies: ["React", "Flask"],
-      image: "/projects/novacart.jpg",
-      description: "A modern e-commerce web application.",
-      link: "/projects/1",
-    },
-    {
-      id: 2,
-      title: "Iqra Kutubi",
-      technologies: ["Python", "Flask", "SQLAlchemy"],
-      image: "/projects/iqra-kutubi.jpg",
-      description: "A web application for managing and exploring books.",
-      link: "/projects/2",
-    },
-    {
-      id: 3,
-      title: "Clinic Management",
-      technologies: ["React", "Flask"],
-      image: "/projects/clinic.jpg",
-      description: "A modern system for managing clinic operations.",
-      link: "/projects/3",
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      technologies: ["React", "CSS", "Framer Motion"],
-      image: "/projects/portfolio.jpg",
-      description: "A modern personal portfolio website.",
-      link: "/projects/4",
-    },
-  ];
+  const project = {
+    id: 1,
+    title: "MK Web Studio",
+    technologies: ["Django"],
+    image: "get1.png",
+    link: "/projects/1",
+  };
 
   return (
     <section className="projects" id="projects">
@@ -61,50 +35,47 @@ function Projects() {
 
         {/* Projects Grid */}
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <motion.article
-              key={project.id}
-              className="project-card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.1,
-              }}
-            >
-              {/* Project Image */}
-              <div className="project-image-wrapper">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
+          <motion.article
+            key={project.id}
+            className="project-card"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.5,
+            }}
+          >
+            {/* Project Image */}
+            <div className="project-image-wrapper">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+              />
 
-                {/* Hover Overlay */}
-                <div className="project-overlay">
-                  <div className="project-overlay-content">
-                    <h3>{project.title}</h3>
+              {/* Hover Overlay */}
+              <div className="project-overlay">
+                <div className="project-overlay-content">
+                  <h3>{project.title}</h3>
 
-                    <div className="project-technologies">
-                      {project.technologies.map((technology) => (
-                        <span key={technology}>
-                          {technology}
-                        </span>
-                      ))}
-                    </div>
-
-                    <a
-                      href={project.link}
-                      className="project-button"
-                    >
-                      View Project
-                    </a>
+                  <div className="project-technologies">
+                    {project.technologies.map((technology) => (
+                      <span key={technology}>
+                        {technology}
+                      </span>
+                    ))}
                   </div>
+
+                  <a
+                    href={project.link}
+                    className="project-button"
+                  >
+                    View Project
+                  </a>
                 </div>
               </div>
-            </motion.article>
-          ))}
+            </div>
+          </motion.article>
         </div>
       </motion.div>
     </section>
