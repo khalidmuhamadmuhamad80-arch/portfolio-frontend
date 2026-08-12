@@ -1,36 +1,107 @@
 import { useState } from "react";
-import "./Navbar.css";
 import { motion, AnimatePresence } from "framer-motion";
+import "./Navbar.css";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  // Main navigation links
+  const navigationLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+  ];
+
+  // Dropdown links
+  const quickLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Contact", href: "#contact" },
+    { name: "Skills", href: "#skills" },
+    { name: "Social Media", href: "#social-media" },
+  ];
 
   return (
     <motion.nav
+      className="navbar"
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="navbar"
     >
       {/* Logo */}
-      <h2 className="navbar-logo">MyPortfolio</h2>
+      <h2 className="navbar-logo">Muhamad Khalid</h2>
 
-      {/* Desktop Menu */}
+      {/* Center Navigation */}
       <div className="nav-links">
-        {["home", "about", "projects", "contact"].map((item) => (
-          <a key={item} href={`#${item}`} className="nav-link">
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+        {navigationLinks.map((item) => (
+          <a
+            key={item.name}
+            href={item.href}
+            className="nav-link"
+          >
+            {item.name}
           </a>
         ))}
       </div>
 
-      {/* Burger Menu Button (Mobile) */}
-      <div
+      {/* Right Dropdown */}
+      <div className="nav-dropdown">
+        <button
+          className="dropdown-button"
+          onClick={() => setDropdownOpen(!dropdownOpen)}
+        >
+          Explore
+          <span
+            className={
+              dropdownOpen
+                ? "chevron rotate"
+                : "chevron"
+            }
+          >
+            ▾
+          </span>
+        </button>
+
+        <AnimatePresence>
+          {dropdownOpen && (
+            <motion.div
+              className="dropdown-menu"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+            >
+              <div className="dropdown-section">
+                <span className="dropdown-title">
+                  Quick Links
+                </span>
+
+                {quickLinks.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="dropdown-link"
+                    onClick={() =>
+                      setDropdownOpen(false)
+                    }
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <button
         className="burger-menu"
         onClick={() => setOpen(!open)}
+        aria-label="Open navigation menu"
       >
         ☰
-      </div>
+      </button>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -41,14 +112,27 @@ function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
           >
-            {["home", "about", "projects", "contact"].map((item) => (
+            {navigationLinks.map((item) => (
               <a
-                key={item}
-                href={`#${item}`}
+                key={item.name}
+                href={item.href}
                 className="mobile-link"
                 onClick={() => setOpen(false)}
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.name}
+              </a>
+            ))}
+
+            <div className="mobile-divider" />
+
+            {quickLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="mobile-link"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
               </a>
             ))}
           </motion.div>
