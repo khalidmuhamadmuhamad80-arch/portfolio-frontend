@@ -1,73 +1,102 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Hero from "./components/hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/contact";
-import ProjectDetails from "./components/ProjectDetails";
-import NovaCartDetails from "./components/NovaCartDetails"; // تم إضافة هذا الاستيراد
+import Footer from "./components/Footer";
 
-// ⚠️ تأكد أن اسم الملف في مجلد pages هو AdminLogin.jsx وليس Login.jsx
+import ProjectDetails from "./components/ProjectDetails";
+import NovaCartDetails from "./components/NovaCartDetails";
+
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+
 // 🏠 Home Page Component
-function Home({ darkMode, setDarkMode }) {
+function Home() {
   return (
     <>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <Navbar />
+
       <Hero />
+
       <About />
+
       <Skills />
+
       <Projects />
+
       <Contact />
+
+      <Footer />
     </>
   );
 }
 
+
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem("darkMode");
-    return saved !== null ? JSON.parse(saved) : true;
-  });
 
+  // 🔌 Backend connection
   useEffect(() => {
-    localStorage.setItem("darkMode", JSON.stringify(darkMode));
-  }, [darkMode]);
+    const BASE_URL =
+      import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
 
-  useEffect(() => {
-    const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
     fetch(`${BASE_URL}/`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("✅ Backend connected successfully:", data);
+        console.log(
+          "✅ Backend connected successfully:",
+          data
+        );
       })
       .catch((err) => {
-        console.error("❌ Backend connection failed:", err);
+        console.error(
+          "❌ Backend connection failed:",
+          err
+        );
       });
   }, []);
 
+
   return (
-    <div style={darkMode ? styles.dark : styles.light}>
+    <div className="app">
+
       <BrowserRouter>
+
         <Routes>
-          {/* 📑 المسار الرئيسي للمحفظة الشخصية */}
+
+          {/* 📑 Main Portfolio */}
           <Route
             path="/"
-            element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}
+            element={<Home />}
           />
 
-          {/* 📑 مسارات تفاصيل المشاريع */}
-          <Route path="/project/1" element={<ProjectDetails />} />
-          <Route path="/project/2" element={<NovaCartDetails />} />
 
-          {/* 🔐 مسار تسجيل دخول المسؤول */}
-          <Route path="/admin/login" element={<AdminLogin />} />
+          {/* 📑 Project Details */}
+          <Route
+            path="/project/1"
+            element={<ProjectDetails />}
+          />
 
-          {/* 🛡️ مسار لوحة التحكم المحمي */}
+          <Route
+            path="/project/2"
+            element={<NovaCartDetails />}
+          />
+
+
+          {/* 🔐 Admin Login */}
+          <Route
+            path="/admin/login"
+            element={<AdminLogin />}
+          />
+
+
+          {/* 🛡️ Protected Admin Dashboard */}
           <Route
             path="/admin"
             element={
@@ -76,26 +105,14 @@ function App() {
               </ProtectedRoute>
             }
           />
+
         </Routes>
+
       </BrowserRouter>
+
     </div>
   );
 }
 
-export default App;
 
-/* ================= 🎨 STYLES ================= */
-const styles = {
-  dark: {
-    background: "#0f172a",
-    color: "white",
-    minHeight: "100vh",
-    transition: "background 0.3s ease, color 0.3s ease"
-  },
-  light: {
-    background: "#f8fafc",
-    color: "#0f172a",
-    minHeight: "100vh",
-    transition: "background 0.3s ease, color 0.3s ease"
-  },
-};
+export default App;
