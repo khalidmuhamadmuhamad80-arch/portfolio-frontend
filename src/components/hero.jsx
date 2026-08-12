@@ -1,233 +1,67 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaDownload } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import "./hero.cssero.css";
 
 function Hero() {
-  const [text, setText] = useState("");
-  const fullText = "Mohamed Khalid";
-
-  useEffect(() => {
-    let i = 0;
-    const interval = setInterval(() => {
-      if (i < fullText.length) {
-        setText((prev) => prev + fullText.charAt(i));
-        i++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 120);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section style={styles.hero} id="home">
-      <div style={styles.particles}>
-        {[...Array(20)].map((_, i) => {
-          const randomX = Math.random() * 100;
-          const randomDelay = Math.random() * 5;
-          const randomDuration = 6 + Math.random() * 8;
-
-          return (
-            <motion.span
-              key={i}
-              style={{ ...styles.particle, left: `${randomX}%` }}
-              initial={{ y: "110vh", opacity: 0 }}
-              animate={{ y: "-10vh", opacity: [0, 0.4, 0.4, 0] }}
-              transition={{
-                duration: randomDuration,
-                repeat: Infinity,
-                delay: randomDelay,
-                ease: "linear"
-              }}
-            />
-          );
-        })}
-      </div>
-
-      <div style={styles.bgGlow}></div>
-
+    <section className="hero" id="home">
       <motion.div
-        style={styles.card}
         className="hero-card"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
       >
-        <motion.img
-          src="me.jpg"
-          alt="Mohamed Khalid"
-          style={styles.image}
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        />
+        {/* Hero Image */}
+        <div className="hero-image-wrapper">
+          <motion.img
+            src="me.jpg"
+            alt="Mohamed Khalid"
+            className="hero-image"
+            animate={{ y: [0, -6, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 4,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
 
-        <h1 style={styles.title} className="responsive-title">
-          {text}
-          <span style={styles.cursor}>|</span>
-        </h1>
+        {/* Hero Content */}
+        <div className="hero-content">
+          <p className="hero-greeting">Hello, I'm</p>
 
-        <h2 style={styles.subtitle}>
-           Full Stack Developer | React | Flask
-        </h2>
+          <h1 className="hero-name">
+            Mohamed Khalid
+          </h1>
 
-        <p style={styles.description}>
-           I am a Full Stack Developer specializing in building modern, scalable web applications. On the backend, I work with Python, Flask, PostgreSQL, SQLAlchemy, JWT Authentication, Flask-CORS, and Marshmallow to create secure and reliable REST APIs. On the frontend, I build responsive and interactive user interfaces using React.
-        </p>
+          <h2 className="hero-role">
+            Full Stack Developer
+          </h2>
 
+          <p className="hero-description">
+            I build modern and responsive web experiences
+            with clean design and reliable technology.
+          </p>
 
+          {/* Hero Actions */}
+          <div className="hero-buttons">
+            <a
+              href="#contact"
+              className="hero-btn primary-btn"
+            >
+              Contact Me
+            </a>
 
-        <div style={styles.buttons} className="buttons-container">
-          <a href="#projects" style={styles.primaryBtn}>View Projects</a>
-
-          <a href="/cv.pdf" download style={styles.secondaryBtn}>
-            <FaDownload /> CV
-          </a>
-
-          <a
-            href="https://github.com/khalidmuhamadmuhamad80-arch"
-            target="_blank"
-            rel="noreferrer"
-            style={styles.githubBtn}
-          >
-            <FaGithub /> GitHub
-          </a>
+            <a
+              href="#projects"
+              className="hero-btn secondary-btn"
+            >
+              View My Work
+            </a>
+          </div>
         </div>
       </motion.div>
     </section>
   );
 }
-
-/* ================= 🎨 STYLES ================= */
-const styles = {
-  hero: {
-    minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
-    overflow: "hidden",
-    padding: "20px",
-    background: "radial-gradient(circle at top, #0f172a, #020617)",
-  },
-  particles: {
-    position: "absolute",
-    width: "100%",
-    height: "100%",
-    top: 0,
-    left: 0,
-    overflow: "hidden",
-    pointerEvents: "none"
-  },
-  particle: {
-    position: "absolute",
-    width: "5px",
-    height: "5px",
-    background: "#38bdf8",
-    borderRadius: "50%",
-    bottom: 0,
-  },
-  card: {
-    zIndex: 2,
-    maxWidth: "750px",
-    width: "100%",
-    boxSizing: "border-box",
-    textAlign: "center",
-    padding: "40px 30px",
-    borderRadius: "20px",
-    background: "rgba(255, 255, 255, 0.03)",
-    backdropFilter: "blur(15px)",
-    border: "1px solid rgba(255, 255, 255, 0.08)",
-    boxShadow: "0 20px 50px rgba(0, 0, 0, 0.3), 0 0 40px rgba(56, 189, 248, 0.1)",
-  },
-  bgGlow: {
-    position: "absolute",
-    width: "450px",
-    height: "450px",
-    background: "rgba(56, 189, 248, 0.18)",
-    filter: "blur(130px)",
-    borderRadius: "50%",
-    top: "15%",
-    left: "50%",
-    transform: "translateX(-50%)",
-    pointerEvents: "none"
-  },
-  image: {
-    width: "150px",
-    height: "150px",
-    borderRadius: "50%",
-    border: "3px solid #38bdf8",
-    marginBottom: "20px",
-    objectFit: "cover",
-    boxShadow: "0 0 20px rgba(56, 189, 248, 0.3)"
-  },
-  title: {
-    fontSize: "clamp(32px, 6vw, 55px)",
-    background: "linear-gradient(90deg, #38bdf8, #a78bfa)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    marginBottom: "15px",
-    fontWeight: "800",
-    wordBreak: "break-word",
-    overflowWrap: "break-word",
-  },
-  cursor: {
-    color: "#a78bfa",
-    animation: "blink 0.7s infinite",
-    marginLeft: "4px"
-  },
-  subtitle: {
-    color: "#38bdf8",
-    fontSize: "clamp(16px, 3vw, 22px)",
-    marginBottom: "15px",
-    fontWeight: "500"
-  },
-  description: {
-    color: "#94a3b8",
-    fontSize: "16px",
-    marginBottom: "30px",
-    lineHeight: "1.8",
-    maxWidth: "600px",
-    marginLeft: "auto",
-    marginRight: "auto"
-  },
-  buttons: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "15px",
-    flexWrap: "wrap",
-  },
-  primaryBtn: {
-    padding: "12px 24px",
-    background: "#38bdf8",
-    borderRadius: "10px",
-    color: "#0f172a",
-    textDecoration: "none",
-    fontWeight: "600",
-    transition: "transform 0.2s"
-  },
-  secondaryBtn: {
-    padding: "12px 24px",
-    border: "1px solid #475569",
-    borderRadius: "10px",
-    color: "#cbd5e1",
-    textDecoration: "none",
-    display: "flex",
-    gap: "8px",
-    alignItems: "center",
-    fontWeight: "500"
-  },
-  githubBtn: {
-    padding: "12px 24px",
-    background: "#1e293b",
-    borderRadius: "10px",
-    color: "white",
-    textDecoration: "none",
-    display: "flex",
-    gap: "8px",
-    alignItems: "center",
-    fontWeight: "500"
-  }
-};
 
 export default Hero;
