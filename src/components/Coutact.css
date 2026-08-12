@@ -1,0 +1,600 @@
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  width: 100%;
+  padding: 120px 5%;
+  box-sizing: border-box;
+
+  background: #e8ded0;
+}
+
+.contact-content {
+  width: min(760px, 100%);
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.contact-label {
+  margin: 0 0 14px;
+
+  color: #7667a8;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.contact-title {
+  margin: 0;
+
+  color: #242228;
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+}
+
+.contact-title span {
+  color: #c98291;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+  max-width: 650px;
+
+  margin: 25px auto 0;
+
+  color: #5c5650;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+
+  font-weight: 500;
+}
+
+.contact-thanks {
+  margin: 18px auto 0;
+
+  color: #766f68;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   OPEN CONTACT BUTTON
+========================================= */
+
+.contact-open-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 32px;
+
+  padding: 13px 21px;
+
+  border: 1px solid transparent;
+
+  border-radius: 10px;
+
+  background: #c98291;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-open-button svg {
+  font-size: 13px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.contact-open-button:hover {
+  background: #f28c5b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(242, 140, 91, 0.2);
+}
+
+.contact-open-button:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   MODAL BACKDROP
+========================================= */
+
+.contact-modal-backdrop {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background: rgba(37, 37, 37, 0.38);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  overflow-y: auto;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.contact-modal {
+  position: relative;
+
+  width: min(560px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 34px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(118, 103, 168, 0.2);
+
+  border-radius: 24px;
+
+  background: #f8f6f2;
+
+  box-shadow:
+    0 30px 80px rgba(36, 34, 40, 0.2);
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.contact-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.modal-label {
+  margin: 0 0 8px;
+
+  color: #7667a8;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.contact-modal-header h3 {
+  margin: 0;
+
+  color: #242228;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  font-weight: 800;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.modal-close {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(36, 34, 40, 0.1);
+
+  border-radius: 50%;
+
+  background: #e8ded0;
+
+  color: #242228;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.modal-close:hover {
+  background: #c98291;
+
+  color: #ffffff;
+
+  transform: rotate(90deg);
+}
+
+.modal-close:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.form-group label {
+  color: #242228;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(36, 34, 40, 0.13);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #242228;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.form-group input {
+  height: 48px;
+}
+
+.form-group textarea {
+  min-height: 125px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9a928b;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #7667a8;
+
+  background: #fffefd;
+
+  box-shadow:
+    0 0 0 3px rgba(118, 103, 168, 0.1);
+}
+
+
+/* =========================================
+   HONEYPOT
+========================================= */
+
+.honeypot {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  padding: 0;
+
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.contact-submit {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 49px;
+
+  margin-top: 3px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #c98291;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-submit:hover:not(:disabled) {
+  background: #f28c5b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(242, 140, 91, 0.18);
+}
+
+.contact-submit:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   SPINNER
+========================================= */
+
+.contact-spinner {
+  animation: contactSpin 0.9s linear infinite;
+}
+
+@keyframes contactSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   STATUS MESSAGE
+========================================= */
+
+.contact-status {
+  margin: 2px 0 0;
+
+  padding: 11px 14px;
+
+  border-radius: 9px;
+
+  text-align: center;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.contact-status.success {
+  background: rgba(118, 103, 168, 0.1);
+
+  color: #5e508f;
+}
+
+.contact-status.error {
+  background: rgba(200, 130, 145, 0.12);
+
+  color: #a85668;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 85px 6%;
+  }
+
+  .contact-title {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .contact-description {
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+  .contact-thanks {
+    font-size: 13px;
+  }
+
+  .contact-modal-backdrop {
+    align-items: center;
+
+    padding: 15px;
+  }
+
+  .contact-modal {
+    padding: 25px 20px;
+
+    border-radius: 20px;
+
+    max-height: 92vh;
+  }
+
+  .contact-modal-header {
+    margin-bottom: 25px;
+  }
+
+  .contact-modal-header h3 {
+    font-size: 26px;
+  }
+
+  .modal-close {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-form {
+    gap: 17px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .contact-section {
+    padding: 70px 5%;
+  }
+
+  .contact-title {
+    font-size: 37px;
+  }
+
+  .contact-modal {
+    padding: 22px 17px;
+  }
+}
