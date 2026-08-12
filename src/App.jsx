@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/hero";
 import About from "./components/About";
@@ -8,10 +7,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/contact";
 import Footer from "./components/Footer";
-
-import ProjectDetails from "./components/ProjectDetails";
-import NovaCartDetails from "./components/NovaCartDetails";
-
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -75,19 +70,6 @@ function App() {
             path="/"
             element={<Home />}
           />
-
-
-          {/* 📑 Project Details */}
-          <Route
-            path="/project/1"
-            element={<ProjectDetails />}
-          />
-
-          <Route
-            path="/project/2"
-            element={<NovaCartDetails />}
-          />
-
 
           {/* 🔐 Admin Login */}
           <Route
