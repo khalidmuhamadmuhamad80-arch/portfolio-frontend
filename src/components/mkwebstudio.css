@@ -1,0 +1,270 @@
+
+.mk-web-studio {
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+}
+
+/* =========================
+   Container
+========================= */
+
+.mk-project-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Shared
+========================= */
+
+.mk-project-label {
+  margin: 0 0 14px;
+  color: #3b82f6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.mk-project-section-title {
+  margin: 0 0 28px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =========================
+   Hero
+========================= */
+
+.mk-project-hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 0 80px;
+}
+
+.mk-project-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mk-project-title {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.mk-project-short-description {
+  max-width: 600px;
+  margin: 25px auto 0;
+  color: #a1a1aa;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   Description
+========================= */
+
+.mk-project-description-section {
+  padding: 90px 0;
+}
+
+.mk-project-description {
+  max-width: 850px;
+  margin: 0;
+  color: #a1a1aa;
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+/* =========================
+   Technologies
+========================= */
+
+.mk-project-technologies-section {
+  padding: 90px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mk-project-technologies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.mk-project-technology {
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.mk-project-technology:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.45);
+  background: rgba(59, 130, 246, 0.04);
+}
+
+.mk-project-technology h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.mk-project-technology p {
+  margin: 0;
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   Links
+========================= */
+
+.mk-project-links-section {
+  padding: 90px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mk-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.mk-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.mk-project-link:hover {
+  transform: translateY(-3px);
+}
+
+.github-link {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+}
+
+.github-link:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.live-link {
+  border: 1px solid #3b82f6;
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.live-link:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* =========================
+   Gallery
+========================= */
+
+.mk-project-gallery-section {
+  padding: 90px 0 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mk-project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.mk-project-gallery-item {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+}
+
+.mk-project-gallery-item:first-child {
+  grid-column: 1 / -1;
+}
+
+.mk-project-gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+    .mk-project-container {
+        width: 88%;
+    }
+
+    .mk-project-hero {
+        min-height: 65vh;
+        padding: 110px 0 60px;
+    }
+
+    .mk-project-title {
+        font-size: clamp(2.6rem, 12vw, 4rem);
+        letter-spacing: -1px;
+    }
+
+    .mk-project-short-description {
+        font-size: 1rem;
+    }
+
+    .mk-project-description-section,
+    .mk-project-technologies-section,
+    .mk-project-links-section,
+    .mk-project-gallery-section {
+        padding: 65px 0;
+    }
+
+    .mk-project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .mk-project-gallery-item:first-child {
+        grid-column: auto;
+    }
+
+    .mk-project-links {
+        flex-direction: column;
+    }
+
+    .mk-project-link {
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+

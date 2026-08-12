@@ -8,7 +8,7 @@ function Projects() {
     title: "MK Web Studio",
     technologies: ["Django"],
     image: "get1.png",
-    link: "/projects/1",
+    link: "./mkwebstudio",
   };
 
   return (

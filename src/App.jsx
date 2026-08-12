@@ -15,7 +15,7 @@ import NovaCartDetails from "./components/NovaCartDetails";
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import MKWebStudio from "./components/mkwebstudio";
 
 // 🏠 Home Page Component
 function Home() {
@@ -94,6 +94,10 @@ function App() {
             path="/admin/login"
             element={<AdminLogin />}
           />
+            <Route
+              path="/projects/mk-web-studio"
+              element={<MKWebStudio />}
+           />
 
 
           {/* 🛡️ Protected Admin Dashboard */}
