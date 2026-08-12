@@ -1,6 +1,6 @@
-/* ================================
+/* =========================================
    NAVBAR
-================================ */
+========================================= */
 
 .navbar {
   position: sticky;
@@ -8,35 +8,41 @@
   z-index: 1000;
 
   width: 100%;
-  min-height: 72px;
+  min-height: 78px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 0 5%;
+  box-sizing: border-box;
 
-  background: rgba(250, 249, 247, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* Transparent Glass Effect */
+  background: rgba(255, 255, 255, 0.38);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
   border-bottom: 1px solid rgba(36, 34, 40, 0.08);
 
-  box-sizing: border-box;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
 
 
-/* ================================
+/* =========================================
    LOGO
-================================ */
+========================================= */
 
 .navbar-logo {
   margin: 0;
 
   color: #242228;
 
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
+
   letter-spacing: -0.5px;
 
   cursor: pointer;
@@ -48,83 +54,371 @@
 
 .navbar-logo:hover {
   color: #f28c5b;
+
   transform: translateY(-1px);
 }
 
 
-/* ================================
-   DESKTOP LINKS
-================================ */
+/* =========================================
+   CENTER NAVIGATION
+========================================= */
 
 .nav-links {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
   display: flex;
   align-items: center;
-  gap: 34px;
+
+  gap: 14px;
 }
+
+
+/* =========================================
+   NAVIGATION CARDS
+========================================= */
 
 .nav-link {
   position: relative;
 
-  color: #242228;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 15px;
+
+  background: #dcd6f7;
+
+  border-radius: 10px;
+
+  color: #111111;
 
   text-decoration: none;
 
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
 
-  letter-spacing: 0.1px;
+  white-space: nowrap;
 
   transition:
-    color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
-/* Animated underline */
+/* Orange underline */
 
 .nav-link::after {
   content: "";
 
   position: absolute;
 
-  left: 0;
-  bottom: -7px;
+  left: 15px;
+  right: 15px;
 
-  width: 0;
+  bottom: 5px;
+
   height: 2px;
 
   background: #f28c5b;
 
   border-radius: 10px;
 
-  transition: width 0.3s ease;
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
 }
 
+
+/* Hover */
+
 .nav-link:hover {
-  color: #7667a8;
-  transform: translateY(-1px);
+  transform: scale(1.04);
+
+  background: #d5cef3;
+
+  box-shadow:
+    0 6px 18px rgba(118, 103, 168, 0.15);
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 
-/* ================================
+/* =========================================
+   EXPLORE DROPDOWN BUTTON
+========================================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+
+.dropdown-button {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 9px 15px;
+
+  background: #dcd6f7;
+
+  border: none;
+
+  border-radius: 10px;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Orange underline */
+
+.dropdown-button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 15px;
+  right: 15px;
+
+  bottom: 5px;
+
+  height: 2px;
+
+  background: #f28c5b;
+
+  border-radius: 10px;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.dropdown-button:hover {
+  transform: scale(1.04);
+
+  background: #d5cef3;
+
+  box-shadow:
+    0 6px 18px rgba(118, 103, 168, 0.15);
+}
+
+.dropdown-button:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================
+   CHEVRON
+========================================= */
+
+.chevron {
+  font-size: 12px;
+
+  display: inline-flex;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.chevron.rotate {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================
+   DROPDOWN MENU
+========================================= */
+
+.dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  right: 0;
+
+  width: max-content;
+
+  min-width: 170px;
+
+  padding: 12px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(36, 34, 40, 0.08);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 18px 45px rgba(36, 34, 40, 0.12);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   DROPDOWN SECTION
+========================================= */
+
+.dropdown-section {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   DROPDOWN TITLE
+========================================= */
+
+.dropdown-title {
+  padding: 4px 8px;
+
+  color: #7667a8;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DROPDOWN LINKS
+========================================= */
+
+.dropdown-link {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: max-content;
+
+  padding: 9px 13px;
+
+  background: #dcd6f7;
+
+  border-radius: 9px;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Orange underline */
+
+.dropdown-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  right: 13px;
+
+  bottom: 5px;
+
+  height: 2px;
+
+  background: #f28c5b;
+
+  border-radius: 10px;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.dropdown-link:hover {
+  transform: scale(1.04);
+
+  background: #d5cef3;
+
+  box-shadow:
+    0 5px 14px rgba(118, 103, 168, 0.14);
+}
+
+.dropdown-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================
    BURGER MENU
-================================ */
+========================================= */
 
 .burger-menu {
   display: none;
 
+  border: none;
+
+  background: transparent;
+
   color: #242228;
 
   font-size: 27px;
+
   line-height: 1;
 
   cursor: pointer;
-
-  user-select: none;
 
   transition:
     color 0.25s ease,
@@ -133,109 +427,182 @@
 
 .burger-menu:hover {
   color: #f28c5b;
+
   transform: scale(1.05);
 }
 
 
-/* ================================
+/* =========================================
    MOBILE MENU
-================================ */
+========================================= */
 
 .mobile-menu {
   position: absolute;
 
   top: calc(100% + 12px);
+
   right: 5%;
 
-  width: 230px;
+  width: max-content;
+
+  min-width: 210px;
+
   max-width: calc(100vw - 40px);
 
-  padding: 24px;
+  padding: 18px;
 
   display: flex;
+
   flex-direction: column;
-  gap: 18px;
 
-  box-sizing: border-box;
+  align-items: flex-start;
 
-  background: rgba(250, 249, 247, 0.97);
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   border: 1px solid rgba(36, 34, 40, 0.08);
 
   border-radius: 18px;
 
   box-shadow:
-    0 18px 45px rgba(36, 34, 40, 0.10);
+    0 18px 45px rgba(36, 34, 40, 0.12);
 
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  box-sizing: border-box;
 }
 
 
-/* ================================
+/* =========================================
    MOBILE LINKS
-================================ */
+========================================= */
 
 .mobile-link {
   position: relative;
 
-  color: #242228;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: max-content;
+
+  padding: 9px 13px;
+
+  background: #dcd6f7;
+
+  border-radius: 9px;
+
+  color: #111111;
 
   text-decoration: none;
 
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
 
-  padding: 4px 0;
+  font-weight: 700;
+
+  white-space: nowrap;
 
   transition:
-    color 0.25s ease,
-    padding-left 0.25s ease;
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* Orange underline */
+
+.mobile-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 13px;
+  right: 13px;
+
+  bottom: 5px;
+
+  height: 2px;
+
+  background: #f28c5b;
+
+  border-radius: 10px;
+
+  transform: scaleX(0);
+
+  transition: transform 0.25s ease;
 }
 
 .mobile-link:hover {
-  color: #f28c5b;
-  padding-left: 5px;
+  transform: scale(1.04);
+
+  background: #d5cef3;
+
+  box-shadow:
+    0 5px 14px rgba(118, 103, 168, 0.14);
+}
+
+.mobile-link:hover::after {
+  transform: scaleX(1);
 }
 
 
-/* ================================
+/* =========================================
+   MOBILE DIVIDER
+========================================= */
+
+.mobile-divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 4px 0;
+
+  background: rgba(36, 34, 40, 0.08);
+}
+
+
+/* =========================================
    TABLET
-================================ */
+========================================= */
 
-@media (max-width: 900px) {
-
-  .navbar {
-    min-height: 68px;
-    padding: 0 4%;
-  }
+@media (max-width: 850px) {
 
   .nav-links {
-    gap: 24px;
+    gap: 8px;
   }
 
   .nav-link {
+    padding: 8px 12px;
+
+    font-size: 13px;
+  }
+
+  .dropdown-button {
+    padding: 8px 12px;
+
     font-size: 13px;
   }
 }
 
 
-/* ================================
+/* =========================================
    MOBILE
-================================ */
+========================================= */
 
 @media (max-width: 700px) {
 
   .navbar {
     min-height: 68px;
+
     padding: 0 5%;
   }
 
-  .navbar-logo {
-    font-size: 20px;
-  }
-
-  .nav-links {
+  .nav-links,
+  .nav-dropdown {
     display: none;
   }
 
@@ -243,15 +610,15 @@
     display: block;
   }
 
-  .mobile-menu {
-    right: 5%;
+  .navbar-logo {
+    font-size: 20px;
   }
 }
 
 
-/* ================================
+/* =========================================
    SMALL MOBILE
-================================ */
+========================================= */
 
 @media (max-width: 400px) {
 
@@ -260,7 +627,8 @@
   }
 
   .mobile-menu {
-    width: 210px;
-    padding: 20px;
+    min-width: 190px;
+
+    padding: 16px;
   }
 }
