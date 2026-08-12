@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./hero.cssero.css";
+import "./hero.css";
 
 function Hero() {
   return (
