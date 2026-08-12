@@ -51,6 +51,7 @@ function Navbar() {
           onClick={() => setDropdownOpen(!dropdownOpen)}
         >
           Explore
+
           <span
             className={
               dropdownOpen
@@ -102,16 +103,6 @@ function Navbar() {
       >
         ☰
       </button>
-      {quickLinks.map((item) => (
-     <a
-        key={item.name}
-        href={item.href}
-        className="mobile-link"
-        onClick={() => setOpen(false)}
-      >
-        {item.name}
-      </a>
-     ))}
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -121,8 +112,18 @@ function Navbar() {
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.2 }}
           >
-
+            {quickLinks.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="mobile-link"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
