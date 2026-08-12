@@ -5,26 +5,77 @@ import "./mkwebstudio.css";
 
 function MKWebStudio() {
   const project = {
-    title: "MK Web Studio",
+    title: "MK Web Studio — Digital Solutions for Modern Businesses",
 
     shortDescription:
-      "Modern digital solutions for businesses.",
+      "Digital solutions built for modern businesses.",
 
     description:
-      "MK Web Studio is a modern web project focused on creating professional digital experiences for businesses and individuals. The project combines a clean user interface with a powerful backend to provide a reliable and scalable web solution.",
+      "MK Web Studio is a digital platform designed to help businesses build a professional online presence. It provides customers with an easy way to explore services, submit inquiries, and place orders, while offering high-quality visuals, a strong brand identity, and a modern responsive experience across all devices.",
 
     technologies: [
+  {
+    category: "Backend",
+    items: [
       {
         name: "Django",
         description:
-          "Used to build the backend, manage application logic, handle data, and provide the required API functionality.",
+          "Used to build the backend, manage business logic, handle data, and provide the core functionality of the platform.",
       },
+      {
+        name: "Email Services",
+        description:
+          "Used to send inquiry notifications and important messages between the platform and its users.",
+      },
+      {
+        name: "JWT",
+        description:
+          "Used to securely manage user authentication and access through token-based authentication.",
+      },
+      {
+        name: "PythonAnywhere",
+        description:
+          "Used to host and run the Django backend in a production environment.",
+      },
+      {
+        name: "GitHub",
+        description:
+          "Used for source code management, version control, and maintaining the project's development workflow.",
+      },
+    ],
+  },
+
+  {
+    category: "Frontend",
+    items: [
       {
         name: "React",
         description:
-          "Used to build the frontend interface and create a responsive and interactive user experience.",
+          "Used to build the interactive frontend and create a smooth, modern user experience.",
+      },
+      {
+        name: "JavaScript",
+        description:
+          "Used to add dynamic functionality and interactive behavior throughout the website.",
+      },
+      {
+        name: "HTML",
+        description:
+          "Used to structure the website content and build the foundation of the user interface.",
+      },
+      {
+        name: "CSS",
+        description:
+          "Used to create the visual design, responsive layouts, animations, and overall appearance of the website.",
+      },
+      {
+        name: "Vercel",
+        description:
+          "Used to deploy and host the frontend application with fast and reliable delivery.",
       },
     ],
+  },
+],
 
     github:
       "https://github.com/your-username/mk-web-studio",
@@ -33,9 +84,9 @@ function MKWebStudio() {
       "https://mkwebstudio.vercel.app/",
 
     images: [
-      "gpt10.png",
-      "gpt11.jpg",
-      "get1.png",
+      "/gpt10.png",
+      "/gpt11.jpg",
+      "/get1.png",
     ],
   };
 
