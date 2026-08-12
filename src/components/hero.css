@@ -336,7 +336,7 @@
 ========================================= */
 
 .primary-btn {
-  background: #c98291;
+  background:#cd41c6 ;
 
   color: #111111;
 
@@ -371,7 +371,7 @@
 .secondary-btn:hover {
   transform: translateY(-2px) scale(1.02);
 
-  background: #7667a8;
+  background:#cd41c6 ;
 
   color: #ffffff;
 
