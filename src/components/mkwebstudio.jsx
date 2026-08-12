@@ -25,12 +25,12 @@ function MKWebStudio() {
       "https://github.com/your-username/mk-web-studio",
 
     liveDemo:
-      "https://your-domain.com",
+      "https://mkwebstudio.vercel.app/",
 
     images: [
-      "/projects/mk-web-studio.jpg",
-      "/projects/mk-web-studio-2.jpg",
-      "/projects/mk-web-studio-3.jpg",
+      "gpt10.png",
+      "gpt11.jpg",
+      "get1.png",
     ],
   };
 
