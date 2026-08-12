@@ -1,114 +1,114 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import "./Projects.css";
 
 function Projects() {
-  const [projects, setProjects] = useState([]);
-  const [hoveredId, setHoveredId] = useState(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    setProjects([
-      {
-        id: 1,
-        title: "Personal Portfolio",
-        image_url: "/footr.png"
-      },
-      {
-        id: 2,
-        title: "NovaCart | React & Flask E-commerce Platform",
-        image_url: "/NovaCart.png" // تأكد من تحديث اسم الصورة لاحقاً إذا أردت
-      }
-    ]);
-  }, []);
+  const projects = [
+    {
+      id: 1,
+      title: "NovaCart",
+      technologies: ["React", "Flask"],
+      image: "/projects/novacart.jpg",
+      description: "A modern e-commerce web application.",
+      link: "/projects/1",
+    },
+    {
+      id: 2,
+      title: "Iqra Kutubi",
+      technologies: ["Python", "Flask", "SQLAlchemy"],
+      image: "/projects/iqra-kutubi.jpg",
+      description: "A web application for managing and exploring books.",
+      link: "/projects/2",
+    },
+    {
+      id: 3,
+      title: "Clinic Management",
+      technologies: ["React", "Flask"],
+      image: "/projects/clinic.jpg",
+      description: "A modern system for managing clinic operations.",
+      link: "/projects/3",
+    },
+    {
+      id: 4,
+      title: "Portfolio Website",
+      technologies: ["React", "CSS", "Framer Motion"],
+      image: "/projects/portfolio.jpg",
+      description: "A modern personal portfolio website.",
+      link: "/projects/4",
+    },
+  ];
 
   return (
-    <section style={styles.section} id="projects">
-      <div style={styles.container}>
-        <h2 style={styles.title}>Projects</h2>
-        <div style={styles.grid}>
-          {projects.map((p) => (
-            <motion.div
-              key={p.id}
-              style={styles.card}
-              onMouseEnter={() => setHoveredId(p.id)}
-              onMouseLeave={() => setHoveredId(null)}
-              onClick={() => navigate(`/project/${p.id}`)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <img src={p.image_url} alt={p.title} style={styles.image} />
+    <section className="projects" id="projects">
+      <motion.div
+        className="projects-container"
+        initial={{ opacity: 0, y: 35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        {/* Section Heading */}
+        <div className="projects-heading">
+          <p className="projects-label">MY WORK</p>
 
-              <motion.div
-                style={styles.overlay}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: hoveredId === p.id ? 1 : 0 }}
-              >
-                <h3 style={styles.overlayText}>{p.title}</h3>
-              </motion.div>
-            </motion.div>
+          <h2 className="projects-title">
+            Selected <span>Projects</span>
+          </h2>
+
+          <p className="projects-intro">
+            A selection of projects I have built and worked on.
+          </p>
+        </div>
+
+        {/* Projects Grid */}
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.id}
+              className="project-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.1,
+              }}
+            >
+              {/* Project Image */}
+              <div className="project-image-wrapper">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                />
+
+                {/* Hover Overlay */}
+                <div className="project-overlay">
+                  <div className="project-overlay-content">
+                    <h3>{project.title}</h3>
+
+                    <div className="project-technologies">
+                      {project.technologies.map((technology) => (
+                        <span key={technology}>
+                          {technology}
+                        </span>
+                      ))}
+                    </div>
+
+                    <a
+                      href={project.link}
+                      className="project-button"
+                    >
+                      View Project
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.article>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
-
-const styles = {
-  section: {
-    padding: "80px 20px",
-    display: "flex",
-    justifyContent: "center"
-  },
-  container: {
-    maxWidth: "800px", // زدنا العرض قليلاً ليتناسب مع الشاشات الكبيرة
-    width: "100%",
-    textAlign: "center"
-  },
-  title: {
-    fontSize: "clamp(30px, 5vw, 40px)", // الخط يتغير حجمه تلقائياً حسب حجم الشاشة
-    color: "#38bdf8",
-    marginBottom: "40px"
-  },
-  grid: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "30px",
-    width: "100%"
-  },
-  card: {
-    position: "relative",
-    borderRadius: "20px",
-    overflow: "hidden",
-    cursor: "pointer",
-    width: "100%",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.2)"
-  },
-  image: {
-    width: "100%",
-    height: "auto", // جعلنا الارتفاع تلقائي ليحافظ على نسبة الصورة (Aspect Ratio)
-    aspectRatio: "16/9", // يضمن أن الصورة لن يتم قصها بشكل سيء
-    objectFit: "cover",
-    display: "block"
-  },
-  overlay: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-    background: "rgba(0, 0, 0, 0.7)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "20px"
-  },
-  overlayText: {
-    color: "#fff",
-    fontSize: "clamp(18px, 3vw, 24px)", // حجم الخط يتناسب مع الشاشة
-    fontWeight: "bold",
-    textAlign: "center"
-  }
-};
 
 export default Projects;
