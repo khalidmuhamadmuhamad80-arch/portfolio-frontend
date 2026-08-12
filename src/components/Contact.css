@@ -7,7 +7,7 @@
   padding: 120px 5%;
   box-sizing: border-box;
 
-  background: #e8ded0;
+  background:#f8f6f2 ;
 }
 
 .contact-content {
@@ -103,7 +103,7 @@
 
   border-radius: 10px;
 
-  background: #c98291;
+  background:#cd41c6 ;
 
   color: #ffffff;
 
@@ -129,7 +129,7 @@
 }
 
 .contact-open-button:hover {
-  background: #f28c5b;
+  background:#36df45 ;
 
   transform: translateY(-2px);
 

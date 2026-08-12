@@ -116,7 +116,7 @@
 
   border-radius: 10px;
 
-  background: #dcd6f7;
+  background:#cd41c6 ;
 
   color: #111111;
 
@@ -144,7 +144,7 @@
 ========================================= */
 
 .about-button:hover {
-  background: #f28c5b;
+  background:#36df45;
 
   color: #ffffff;
 
