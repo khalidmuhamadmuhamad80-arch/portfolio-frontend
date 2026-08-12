@@ -14,7 +14,7 @@
   justify-content: space-between;
   gap: 30px;
 
-  background: #c98291;
+  background: #E8DED0;
   color: #f8f5ef;
 
   border-top: 1px solid rgba(37, 37, 37, 0.08);
@@ -58,7 +58,9 @@
 .footer-icons {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
 }
 
 .footer-icon {
