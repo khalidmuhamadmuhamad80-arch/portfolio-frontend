@@ -338,10 +338,10 @@
 .primary-btn {
   background:#cd41c6 ;
 
-  color: #111111;
+  color: #0fd9e1;
 
   box-shadow:
-    0 8px 20px rgba(201, 130, 145, 0.22);
+    0 8px 20px rgb(15 217 225);
 }
 
 
@@ -350,10 +350,10 @@
 
   background: #a94fa5;
 
-  color: #ffffff;
+  color: #000000;
 
   box-shadow:
-    0 12px 25px rgba(242, 140, 91, 0.25);
+    0 12px 25px rgb(0 253 225);
 }
 
 
@@ -373,10 +373,10 @@
 
   background:#a94fa5 ;
 
-  color: #ffffff;
+  color: #000000;
 
   box-shadow:
-    0 12px 25px rgba(118, 103, 168, 0.2);
+    0 12px 25px rgb(15 217 225);
 }
 
 

@@ -105,7 +105,7 @@
 
   background:#cd41c6 ;
 
-  color: #ffffff;
+  color: #000000;
 
   font-family: inherit;
 
@@ -129,7 +129,7 @@
 }
 
 .contact-open-button:hover {
-  background:#36df45 ;
+  background:#0fd9e1 ;
 
   transform: translateY(-2px);
 
@@ -278,7 +278,7 @@
 .modal-close:hover {
   background: #c98291;
 
-  color: #ffffff;
+  color: #000000;
 
   transform: rotate(90deg);
 }
@@ -456,7 +456,7 @@
 }
 
 .contact-submit:hover:not(:disabled) {
-  background: #f28c5b;
+  background: #0fd9e1;
 
   transform: translateY(-2px);
 
