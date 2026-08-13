@@ -444,7 +444,7 @@
 .mobile-link:hover {
   transform: scale(1.04);
 
-  background: #d5cef3;
+  background: #000000;
 
   box-shadow:
     0 5px 14px rgb(0 0 0);
