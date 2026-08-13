@@ -8,7 +8,7 @@ function Navbar() {
 
 // Main navigation links
 const navigationLinks = [
-  { name: "Home", href: "#home" },
+  { name: "Home", href: "/#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
@@ -18,7 +18,7 @@ const navigationLinks = [
 
 // Dropdown links
 const quickLinks = [
-  { name: "Home", href: "#home" },
+  { name: "Home", href: "/#home" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
