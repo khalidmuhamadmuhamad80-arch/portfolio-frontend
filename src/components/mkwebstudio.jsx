@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./mkwebstudio.css";
-
+import Navbar from "./Navbar";
 function MKWebStudio() {
   const project = {
     title: "MK Web Studio — Digital Solutions for Modern Businesses",
@@ -43,6 +43,8 @@ function MKWebStudio() {
   };
 
   return (
+      <>
+       <Navbar/>
     <main className="mk-web-studio">
 
       {/* =========================
@@ -273,6 +275,7 @@ function MKWebStudio() {
       </section>
 
     </main>
+    </>
   );
 }
 
