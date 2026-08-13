@@ -613,14 +613,36 @@
 
 
   .mk-project-hero-container {
+  width: min(1120px, 100%);
 
-    padding: 30px 20px;
+  display: grid;
 
-    gap: 32px;
+  grid-template-columns: 1.05fr 0.95fr;
 
-    border-radius: 22px;
-  }
+  align-items: center;
 
+  gap: 70px;
+
+  padding: 55px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  border: 1px solid rgba(36, 34, 40, 0.08);
+
+  border-radius: 32px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 70px rgba(36, 34, 40, 0.09);
+
+  overflow: hidden;
+
+  position: relative;
+}
 
   .mk-project-title {
 
@@ -1448,7 +1470,4 @@
   .mk-project-technology {
     padding: 25px;
   }
-}
-.mk-project-hero {
-  background: red !important;
 }

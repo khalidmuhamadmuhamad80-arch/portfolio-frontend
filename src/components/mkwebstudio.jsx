@@ -48,11 +48,7 @@ function MKWebStudio() {
        <Navbar/>
     <main className="mk-web-studio">
 
-      {/* =========================
-    HERO
-========================= */}
-
-<section className="mk-project-hero">
+       <section className="mk-project-hero">
 
   <motion.div
     className="mk-project-hero-container"
@@ -64,10 +60,7 @@ function MKWebStudio() {
     }}
   >
 
-    {/* =========================
-        LEFT — CONTENT
-    ========================= */}
-
+    {/* LEFT — CONTENT */}
     <div className="mk-project-hero-content">
 
       <p className="mk-project-label">
@@ -82,9 +75,6 @@ function MKWebStudio() {
         {project.shortDescription}
       </p>
 
-
-      {/* Hero Buttons */}
-
       <div className="mk-project-hero-buttons">
 
         {project.liveDemo && (
@@ -94,10 +84,7 @@ function MKWebStudio() {
             rel="noopener noreferrer"
             className="mk-project-link live-link"
           >
-            <span>
-              Visit Live Website
-            </span>
-
+            <span>Visit Live Website</span>
             <FaExternalLinkAlt />
           </a>
         )}
@@ -111,9 +98,7 @@ function MKWebStudio() {
           >
             <FaGithub />
 
-            <span>
-              View on GitHub
-            </span>
+            <span>View on GitHub</span>
 
             <FaExternalLinkAlt />
           </a>
@@ -124,10 +109,7 @@ function MKWebStudio() {
     </div>
 
 
-    {/* =========================
-        RIGHT — IMAGE
-    ========================= */}
-
+    {/* RIGHT — IMAGE */}
     <div className="mk-project-hero-image">
 
       <img
@@ -140,6 +122,10 @@ function MKWebStudio() {
   </motion.div>
 
 </section>
+
+
+
+
 
 
       {/* =========================
