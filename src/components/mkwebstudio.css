@@ -346,8 +346,7 @@
 }
 
 
-.mk-project-hero-container:hover
-.mk-project-hero-image::before {
+.mk-project-container:hover .mk-project-hero-image::before {
   transform: rotate(-2deg) scale(1.02);
 }
 
