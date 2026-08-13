@@ -9,21 +9,21 @@ function Navbar() {
 // Main navigation links
 const navigationLinks = [
   { name: "Home", href: "/#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-  { name: "Social Media", href: "#social-media" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Contact", href: "/#contact" },
+  { name: "Social Media", href: "/#social-media" },
 ];
 
 // Dropdown links
 const quickLinks = [
   { name: "Home", href: "/#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-  { name: "Social Media", href: "#social-media" },
+  { name: "About", href: "/#about" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Projects", href: "/#projects" },
+  { name: "Contact", href: "/#contact" },
+  { name: "Social Media", href: "/#social-media" },
 ];
 
   return (

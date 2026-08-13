@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./mkwebstudio.css";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 function MKWebStudio() {
   const project = {
     title: "MK Web Studio — Digital Solutions for Modern Businesses",
@@ -275,6 +276,8 @@ function MKWebStudio() {
       </section>
 
     </main>
+
+        <Footer />
     </>
   );
 }

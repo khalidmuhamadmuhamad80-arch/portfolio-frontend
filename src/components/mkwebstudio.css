@@ -19,29 +19,6 @@
   margin: 0 auto;
 }
 
-
-/* =========================================
-   HERO SECTION
-========================================= */
-
-.mk-project-hero {
-  width: 100%;
-  min-height: calc(100vh - 78px);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 70px 5%;
-  box-sizing: border-box;
-
-  background: #f8f6f2;
-}
-
-
-
-
-
 /* =========================================
    PROJECT HERO
 ========================================= */
@@ -54,7 +31,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 70px 5%;
+  padding: 65px 5%;
 
   box-sizing: border-box;
 
@@ -63,19 +40,24 @@
 
 
 /* =========================================
-   HERO CONTAINER
+   HERO CARD
 ========================================= */
 
 .mk-project-hero-container {
+  position: relative;
+
   width: min(1120px, 100%);
 
   display: grid;
 
   grid-template-columns: 1.05fr 0.95fr;
 
+  grid-template-areas:
+    "content image";
+
   align-items: center;
 
-  gap: 70px;
+  gap: 65px;
 
   padding: 55px;
 
@@ -94,13 +76,11 @@
     0 25px 70px rgba(36, 34, 40, 0.09);
 
   overflow: hidden;
-
-  position: relative;
 }
 
 
 /* =========================================
-   DECORATIVE BACKGROUND
+   DECORATIVE CIRCLE
 ========================================= */
 
 .mk-project-hero-container::before {
@@ -154,6 +134,8 @@
 ========================================= */
 
 .mk-project-hero-content {
+  grid-area: content;
+
   position: relative;
 
   z-index: 2;
@@ -186,11 +168,13 @@
 
 
 /* =========================================
-   PROJECT TITLE
+   TITLE
 ========================================= */
 
 .mk-project-title {
   margin: 0;
+
+  max-width: 680px;
 
   color: #242228;
 
@@ -201,8 +185,6 @@
   font-weight: 800;
 
   letter-spacing: -2.5px;
-
-  max-width: 650px;
 }
 
 
@@ -211,9 +193,9 @@
 ========================================= */
 
 .mk-project-short-description {
-  margin: 20px 0 0;
-
   max-width: 540px;
+
+  margin: 20px 0 0;
 
   color: #5c5650;
 
@@ -230,6 +212,8 @@
 ========================================= */
 
 .mk-project-hero-image {
+  grid-area: image;
+
   position: relative;
 
   z-index: 2;
@@ -244,7 +228,9 @@
 }
 
 
-/* Decorative frame */
+/* =========================================
+   IMAGE DECORATIVE FRAME
+========================================= */
 
 .mk-project-hero-image::before {
   content: "";
@@ -253,7 +239,7 @@
 
   width: 82%;
 
-  aspect-ratio: 1 / 0.72;
+  aspect-ratio: 16 / 10;
 
   max-width: 480px;
 
@@ -277,13 +263,13 @@
 
 
 /* =========================================
-   HERO IMAGE ELEMENT
+   IMAGE
 ========================================= */
 
 .mk-project-hero-image img {
   display: block;
 
-  width: min(100%, 500px);
+  width: min(100%, 480px);
 
   aspect-ratio: 16 / 10;
 
@@ -311,270 +297,7 @@
 
 
 /* =========================================
-   HERO BUTTONS
-========================================= */
-
-.mk-project-hero-buttons {
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-
-  margin-top: 30px;
-
-  flex-wrap: wrap;
-}
-
-
-.mk-project-hero-buttons .mk-project-link {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 9px;
-
-  min-width: 135px;
-
-  padding: 12px 20px;
-
-  border-radius: 10px;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-
-/* =========================================
-   PRIMARY BUTTON
-========================================= */
-
-.mk-project-hero-buttons .live-link {
-  background: #cd41c6;
-
-  color: #111111;
-
-  box-shadow:
-    0 8px 20px rgba(201, 130, 145, 0.22);
-}
-
-
-.mk-project-hero-buttons .live-link:hover {
-  transform: translateY(-2px);
-
-  background: #36df45;
-
-  color: #ffffff;
-
-  box-shadow:
-    0 12px 25px rgba(54, 223, 69, 0.22);
-}
-
-
-/* =========================================
-   SECONDARY BUTTON
-========================================= */
-
-.mk-project-hero-buttons .github-link {
-  background: #cd41c6;
-
-  color: #111111;
-}
-
-
-.mk-project-hero-buttons .github-link:hover {
-  transform: translateY(-2px);
-
-  background: #36df45;
-
-  color: #ffffff;
-
-  box-shadow:
-    0 12px 25px rgba(54, 223, 69, 0.22);
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 950px) {
-
-  .mk-project-hero {
-    padding: 55px 4%;
-  }
-
-  .mk-project-hero-container {
-    gap: 40px;
-
-    padding: 42px;
-  }
-
-  .mk-project-title {
-    font-size: clamp(38px, 5vw, 55px);
-  }
-
-  .mk-project-short-description {
-    font-size: 15px;
-  }
-
-  .mk-project-hero-image img {
-    width: min(100%, 420px);
-  }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
-  .mk-project-hero {
-    min-height: auto;
-
-    padding: 45px 5%;
-  }
-
-  .mk-project-hero-container {
-
-    /* Content first */
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-      "content"
-      "image";
-
-    gap: 42px;
-
-    padding: 35px 25px;
-
-    border-radius: 26px;
-
-    text-align: center;
-  }
-
-
-  /* Content */
-
-  .mk-project-hero-content {
-    grid-area: content;
-
-    width: 100%;
-
-    align-items: center;
-  }
-
-
-  .mk-project-short-description {
-    max-width: 500px;
-  }
-
-
-  /* Image */
-
-  .mk-project-hero-image {
-    grid-area: image;
-
-    width: 100%;
-
-    display: flex;
-
-    justify-content: center;
-  }
-
-
-  .mk-project-hero-image img {
-    width: min(85vw, 360px);
-
-    aspect-ratio: 16 / 10;
-  }
-
-
-  /* Buttons */
-
-  .mk-project-hero-buttons {
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-}
-
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 450px) {
-
-  .mk-project-hero {
-    padding: 30px 4%;
-  }
-
-  .mk-project-hero-container {
-    padding: 30px 20px;
-
-    gap: 32px;
-
-    border-radius: 22px;
-  }
-
-
-  .mk-project-title {
-    font-size: 39px;
-
-    letter-spacing: -1.8px;
-  }
-
-
-  .mk-project-short-description {
-    font-size: 14px;
-
-    line-height: 1.7;
-  }
-
-
-  .mk-project-hero-image img {
-    width: 82vw;
-
-    max-width: 300px;
-
-    border-width: 5px;
-
-    border-radius: 22px;
-  }
-
-
-  .mk-project-hero-buttons {
-    width: 100%;
-
-    flex-direction: column;
-
-    gap: 10px;
-  }
-
-
-  .mk-project-hero-buttons .mk-project-link {
-    width: 100%;
-
-    box-sizing: border-box;
-  }
-}
-
-
-/* =========================================
-   HERO BUTTONS
+   HERO LINKS
 ========================================= */
 
 .mk-project-hero-links {
@@ -585,11 +308,13 @@
   gap: 13px;
 
   margin-top: 32px;
+
+  flex-wrap: wrap;
 }
 
 
 /* =========================================
-   BASE BUTTON
+   BUTTON
 ========================================= */
 
 .mk-project-link {
@@ -598,6 +323,7 @@
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 9px;
@@ -630,7 +356,7 @@
    PRIMARY BUTTON
 ========================================= */
 
-.mk-project-link:first-child {
+.mk-project-hero-links .live-link {
   background: #cd41c6;
 
   color: #111111;
@@ -639,7 +365,8 @@
     0 8px 20px rgba(201, 130, 145, 0.22);
 }
 
-.mk-project-link:first-child:hover {
+
+.mk-project-hero-links .live-link:hover {
   transform: translateY(-2px) scale(1.02);
 
   background: #36df45;
@@ -647,21 +374,22 @@
   color: #ffffff;
 
   box-shadow:
-    0 12px 25px rgba(242, 140, 91, 0.25);
+    0 12px 25px rgba(54, 223, 69, 0.22);
 }
 
 
 /* =========================================
-   SECONDARY BUTTON
+   GITHUB BUTTON
 ========================================= */
 
-.mk-project-link:last-child {
+.mk-project-hero-links .github-link {
   background: #cd41c6;
 
   color: #111111;
 }
 
-.mk-project-link:last-child:hover {
+
+.mk-project-hero-links .github-link:hover {
   transform: translateY(-2px) scale(1.02);
 
   background: #36df45;
@@ -669,8 +397,204 @@
   color: #ffffff;
 
   box-shadow:
-    0 12px 25px rgba(118, 103, 168, 0.2);
+    0 12px 25px rgba(54, 223, 69, 0.22);
 }
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .mk-project-hero {
+    padding: 55px 4%;
+  }
+
+
+  .mk-project-hero-container {
+    gap: 42px;
+
+    padding: 42px;
+  }
+
+
+  .mk-project-title {
+    font-size: clamp(38px, 5vw, 55px);
+  }
+
+
+  .mk-project-short-description {
+    font-size: 15px;
+  }
+
+
+  .mk-project-hero-image img {
+    width: min(100%, 420px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .mk-project-hero {
+    min-height: auto;
+
+    padding: 45px 5%;
+  }
+
+
+  .mk-project-hero-container {
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "content"
+      "image";
+
+    gap: 42px;
+
+    padding: 35px 25px;
+
+    border-radius: 26px;
+
+    text-align: center;
+  }
+
+
+  /* Content */
+
+  .mk-project-hero-content {
+
+    width: 100%;
+
+    align-items: center;
+  }
+
+
+  .mk-project-short-description {
+    max-width: 500px;
+  }
+
+
+  /* Image */
+
+  .mk-project-hero-image {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+
+  .mk-project-hero-image img {
+
+    width: min(85vw, 360px);
+
+    aspect-ratio: 16 / 10;
+  }
+
+
+  /* Buttons */
+
+  .mk-project-hero-links {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .mk-project-hero {
+    padding: 30px 4%;
+  }
+
+
+  .mk-project-hero-container {
+
+    padding: 30px 20px;
+
+    gap: 32px;
+
+    border-radius: 22px;
+  }
+
+
+  .mk-project-title {
+
+    font-size: 39px;
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .mk-project-short-description {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .mk-project-hero-image img {
+
+    width: 82vw;
+
+    max-width: 300px;
+
+    border-width: 5px;
+
+    border-radius: 22px;
+  }
+
+
+  .mk-project-hero-links {
+
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .mk-project-link {
+
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .mk-project-hero-image::before,
+  .mk-project-hero-image img,
+  .mk-project-link {
+
+    transition: none;
+  }
+}
+
+
 
 
 /* =========================================
