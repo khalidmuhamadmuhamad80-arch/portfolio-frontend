@@ -48,11 +48,12 @@
   min-height: 430px;
 
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-areas: "content image";
 
   align-items: center;
 
-  gap: 55px;
+  gap: 60px;
 
   padding: 45px 60px;
 
@@ -72,6 +73,14 @@
 
   overflow: hidden;
   position: relative;
+}
+
+.mk-project-hero-content {
+  grid-area: content;
+}
+
+.mk-project-hero-image {
+  grid-area: image;
 }
 
 
