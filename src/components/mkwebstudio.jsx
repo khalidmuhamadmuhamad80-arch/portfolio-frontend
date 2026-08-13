@@ -100,7 +100,6 @@ function MKWebStudio() {
 
             <span>View on GitHub</span>
 
-            <FaExternalLinkAlt />
           </a>
         )}
 

@@ -384,12 +384,12 @@
 .mk-project-link.live-link:hover {
   transform: translateY(-2px) scale(1.02);
 
-  background: #a94fa5;
+  background: #a0c630;
 
   color: #ffffff;
 
   box-shadow:
-    0 12px 25px rgba(169, 79, 165, 0.25);
+    0 12px 25px rgb(0 0 0 / 0.25);
 }
 
 
