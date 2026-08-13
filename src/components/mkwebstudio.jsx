@@ -140,61 +140,38 @@ function MKWebStudio() {
         </motion.div>
       </section>
 
-
       {/* =========================
           TECHNOLOGIES
-      ========================= */}
-      <section className="mk-project-technologies-section">
-        <motion.div
-          className="mk-project-container"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="mk-project-label">
+       ========================= */}
+
+     <section className="mk-project-technologies-section">
+       <motion.div
+         className="mk-project-container"
+         initial={{ opacity: 0, y: 30 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         viewport={{ once: true }}
+         transition={{ duration: 0.7 }}
+       >
+         <p className="mk-project-label">
             TECHNOLOGIES
-          </p>
+         </p>
 
-          <h2 className="mk-project-section-title">
+        <h2 className="mk-project-section-title">
             Technologies Used
-          </h2>
+        </h2>
 
-          <div className="mk-project-technologies-list">
-
-            {project.technologies.map((category) => (
-              <div
-                className="mk-project-technology-category"
-                key={category.category}
-              >
-                <h3 className="mk-project-category-title">
-                  {category.category}
-                </h3>
-
-                <div className="mk-project-technology-items">
-
-                  {category.items.map((technology) => (
-                    <div
-                      className="mk-project-technology"
-                      key={technology.name}
-                    >
-                      <h4>
-                        {technology.name}
-                      </h4>
-
-                      <p>
-                        {technology.description}
-                      </p>
-                    </div>
-                  ))}
-
-                </div>
-              </div>
-            ))}
-
-          </div>
-        </motion.div>
-      </section>
+        <div className="mk-project-technologies-list">
+           {project.technologies.map((technology) => (
+            <div
+              className="mk-project-technology"
+              key={technology.name}
+            >
+              <h3>{technology.name}</h3>
+            </div>
+        ))}
+    </div>
+  </motion.div>
+</section>
 
 
       {/* =========================
