@@ -668,6 +668,15 @@
     box-sizing: border-box;
   }
 }
+.mk-project-hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 22px; /* المسافة بين الزرارين */
+
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
 
 
 /* =========================================
