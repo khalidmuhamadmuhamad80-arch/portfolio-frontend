@@ -16,68 +16,17 @@ function MKWebStudio() {
       "MK Web Studio is a digital platform designed to help businesses build a professional online presence. It provides customers with an easy way to explore services, submit inquiries, and place orders, while offering high-quality visuals, a strong brand identity, and a modern responsive experience across all devices.",
 
     technologies: [
-      {
-        category: "Backend",
-        items: [
-          {
-            name: "Django",
-            description:
-              "Used to build the backend, manage business logic, handle data, and provide the core functionality of the platform.",
-          },
-          {
-            name: "Email Services",
-            description:
-              "Used to send inquiry notifications and important messages between the platform and its users.",
-          },
-          {
-            name: "JWT",
-            description:
-              "Used to securely manage user authentication and access through token-based authentication.",
-          },
-          {
-            name: "PythonAnywhere",
-            description:
-              "Used to host and run the Django backend in a production environment.",
-          },
-          {
-            name: "GitHub",
-            description:
-              "Used for source code management, version control, and maintaining the project's development workflow.",
-          },
-        ],
-      },
-
-      {
-        category: "Frontend",
-        items: [
-          {
-            name: "React",
-            description:
-              "Used to build the interactive frontend and create a smooth, modern user experience.",
-          },
-          {
-            name: "JavaScript",
-            description:
-              "Used to add dynamic functionality and interactive behavior throughout the website.",
-          },
-          {
-            name: "HTML",
-            description:
-              "Used to structure the website content and build the foundation of the user interface.",
-          },
-          {
-            name: "CSS",
-            description:
-              "Used to create the visual design, responsive layouts, animations, and overall appearance of the website.",
-          },
-          {
-            name: "Vercel",
-            description:
-              "Used to deploy and host the frontend application with fast and reliable delivery.",
-          },
-        ],
-      },
-    ],
+  { name: "Django" },
+  { name: "React" },
+  { name: "JWT" },
+  { name: "JavaScript" },
+  { name: "GitHub" },
+  { name: "HTML" },
+  { name: "CSS" },
+  { name: "Email Services" },
+  { name: "PythonAnywhere" },
+  { name: "Vercel" },
+],
 
     github:
       "https://github.com/your-username/mk-web-studio",
