@@ -117,7 +117,7 @@
   background:#0fd9e1 ;
 
   box-shadow:
-    0 6px 18px rgba(118, 103, 168, 0.15);
+    0 6px 18px rgb(0 0 0);
 }
 
 .nav-link:hover::after {
@@ -178,7 +178,7 @@
   background: #0fd9e1;
 
   box-shadow:
-    0 6px 18px rgba(118, 103, 168, 0.15);
+    0 6px 18px rgb(0 0 0);
 }
 
 .dropdown-button:hover::after {
@@ -321,7 +321,7 @@
   background:#0fd9e1 ;
 
   box-shadow:
-    0 5px 14px rgba(118, 103, 168, 0.14);
+    0 5px 14px rgb(0 0 0);
 }
 
 .dropdown-link:hover::after {
