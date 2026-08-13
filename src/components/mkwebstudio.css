@@ -44,18 +44,18 @@
 ========================================= */
 
 .mk-project-hero-container {
-  width: min(1250px, 100%);
-  min-height: 430px;
+  width: min(1400px, 100%);
 
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-areas: "content image";
+  grid-template-columns: 1fr 1fr;
 
   align-items: center;
 
-  gap: 60px;
+  gap: 70px;
 
-  padding: 45px 60px;
+  padding: 55px 70px;
+
+  min-height: 430px;
 
   box-sizing: border-box;
 
@@ -63,7 +63,7 @@
 
   border: 1px solid rgba(36, 34, 40, 0.08);
 
-  border-radius: 32px;
+  border-radius: 28px;
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -72,6 +72,7 @@
     0 25px 70px rgba(36, 34, 40, 0.09);
 
   overflow: hidden;
+
   position: relative;
 }
 
@@ -280,7 +281,7 @@
 .mk-project-hero-image img {
   display: block;
 
-  width: min(100%, 500px);
+  width: min(100%, 600px);
 
   aspect-ratio: 16 / 10;
 
