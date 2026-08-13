@@ -348,7 +348,7 @@
 .primary-btn:hover {
   transform: translateY(-2px) scale(1.02);
 
-  background: #36df45;
+  background: #a94fa5;
 
   color: #ffffff;
 
@@ -371,7 +371,7 @@
 .secondary-btn:hover {
   transform: translateY(-2px) scale(1.02);
 
-  background:#36df45 ;
+  background:#a94fa5 ;
 
   color: #ffffff;
 
