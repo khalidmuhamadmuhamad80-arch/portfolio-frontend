@@ -43,7 +43,7 @@
 }
 
 .footer-arrow {
-  color: #f28c5b;
+  color: #0fd9e1;
 
   font-size: 14px;
 
@@ -97,9 +97,9 @@
 
   background: #f8f5ef;
 
-  color:#36df45 ;
+  color:#0fd9e1 ;
 
-  border-color:#36df45 ;
+  border-color:#0fd9e1 ;
 
   box-shadow:
     0 7px 18px rgba(37, 37, 37, 0.12);
@@ -141,13 +141,13 @@
   width: 0;
   height: 2px;
 
-  background: #f28c5b;
+  background: #0fd9e1;
 
   transition: width 0.25s ease;
 }
 
 .footer-contact:hover {
-  color: #f28c5b;
+  color: #0fd9e1;
 
   transform: translateY(-1px);
 }
