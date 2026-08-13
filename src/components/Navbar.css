@@ -114,7 +114,7 @@
 .nav-link:hover {
   transform: scale(1.04);
 
-  background:#36df45 ;
+  background:#0fd9e1 ;
 
   box-shadow:
     0 6px 18px rgba(118, 103, 168, 0.15);
@@ -175,7 +175,7 @@
 .dropdown-button:hover {
   transform: scale(1.04);
 
-  background: #36df45;
+  background: #0fd9e1;
 
   box-shadow:
     0 6px 18px rgba(118, 103, 168, 0.15);
@@ -259,7 +259,7 @@
 .dropdown-title {
   padding: 4px 8px;
 
-  color: #7667a8;
+  color: #000000;
 
   font-size: 11px;
 
@@ -318,7 +318,7 @@
 .dropdown-link:hover {
   transform: scale(1.04);
 
-  background:#36df45 ;
+  background:#0fd9e1 ;
 
   box-shadow:
     0 5px 14px rgba(118, 103, 168, 0.14);
