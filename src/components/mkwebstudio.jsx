@@ -10,6 +10,8 @@ function MKWebStudio() {
     shortDescription:
       "Digital solutions built for modern businesses.",
 
+     heroImage: "/gpt12.png",
+
     description:
       "MK Web Studio is a digital platform designed to help businesses build a professional online presence. It provides customers with an easy way to explore services, submit inquiries, and place orders, while offering high-quality visuals, a strong brand identity, and a modern responsive experience across all devices.",
 
@@ -117,6 +119,12 @@ function MKWebStudio() {
           <p className="mk-project-short-description">
             {project.shortDescription}
           </p>
+          <div className="mk-project-hero-image">
+            <img
+                src={project.heroImage}
+                alt={project.title}
+            />
+          </div>
 
           {/* Hero Buttons */}
           <div className="mk-project-hero-buttons">

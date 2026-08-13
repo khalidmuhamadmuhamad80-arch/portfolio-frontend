@@ -39,25 +39,47 @@
 }
 
 
+
+
+
 /* =========================================
-   HERO CARD
+   PROJECT HERO
 ========================================= */
 
-.mk-project-hero-content {
-  position: relative;
-
-  width: min(1120px, 100%);
+.mk-project-hero {
+  width: 100%;
+  min-height: calc(100vh - 78px);
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  padding: 70px 55px;
+  padding: 70px 5%;
 
   box-sizing: border-box;
 
-  text-align: center;
+  background: #f8f6f2;
+}
+
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.mk-project-hero-container {
+  width: min(1120px, 100%);
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  align-items: center;
+
+  gap: 70px;
+
+  padding: 55px;
+
+  box-sizing: border-box;
 
   background: rgba(255, 255, 255, 0.62);
 
@@ -73,15 +95,15 @@
 
   overflow: hidden;
 
-  isolation: isolate;
+  position: relative;
 }
 
 
 /* =========================================
-   HERO DECORATIVE CIRCLES
+   DECORATIVE BACKGROUND
 ========================================= */
 
-.mk-project-hero-content::before {
+.mk-project-hero-container::before {
   content: "";
 
   position: absolute;
@@ -98,12 +120,13 @@
 
   opacity: 0.55;
 
-  z-index: -1;
-
   pointer-events: none;
+
+  z-index: 0;
 }
 
-.mk-project-hero-content::after {
+
+.mk-project-hero-container::after {
   content: "";
 
   position: absolute;
@@ -118,28 +141,45 @@
 
   border-radius: 50%;
 
-  opacity: 0.25;
-
-  z-index: -1;
+  opacity: 0.22;
 
   pointer-events: none;
+
+  z-index: 0;
 }
 
 
 /* =========================================
-   PROJECT LABEL
+   HERO CONTENT
+========================================= */
+
+.mk-project-hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================
+   LABEL
 ========================================= */
 
 .mk-project-label {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 
   color: #cd41c6;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 700;
 
-  letter-spacing: 1.5px;
+  letter-spacing: 1.6px;
 
   text-transform: uppercase;
 }
@@ -154,13 +194,15 @@
 
   color: #242228;
 
-  font-size: clamp(42px, 6vw, 72px);
+  font-size: clamp(40px, 5vw, 64px);
 
   line-height: 1.05;
 
   font-weight: 800;
 
   letter-spacing: -2.5px;
+
+  max-width: 650px;
 }
 
 
@@ -169,56 +211,365 @@
 ========================================= */
 
 .mk-project-short-description {
-  max-width: 600px;
+  margin: 20px 0 0;
 
-  margin: 22px 0 0;
+  max-width: 540px;
 
   color: #5c5650;
 
-  font-size: 16px;
+  font-size: 17px;
 
-  line-height: 1.8;
+  line-height: 1.75;
 
   font-weight: 500;
 }
 
 
 /* =========================================
-   HERO TECHNOLOGIES
+   HERO IMAGE
 ========================================= */
 
-.mk-project-hero-technologies {
+.mk-project-hero-image {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+
+/* Decorative frame */
+
+.mk-project-hero-image::before {
+  content: "";
+
+  position: absolute;
+
+  width: 82%;
+
+  aspect-ratio: 1 / 0.72;
+
+  max-width: 480px;
+
+  background: #dcd6f7;
+
+  border-radius: 28px;
+
+  transform: rotate(-4deg);
+
+  z-index: -1;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.mk-project-hero-container:hover
+.mk-project-hero-image::before {
+  transform: rotate(-2deg) scale(1.02);
+}
+
+
+/* =========================================
+   HERO IMAGE ELEMENT
+========================================= */
+
+.mk-project-hero-image img {
+  display: block;
+
+  width: min(100%, 500px);
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  border: 7px solid rgba(255, 255, 255, 0.85);
+
+  box-shadow:
+    0 20px 45px rgba(36, 34, 40, 0.15);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.mk-project-hero-image img:hover {
+  transform: scale(1.015);
+
+  box-shadow:
+    0 25px 55px rgba(36, 34, 40, 0.19);
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.mk-project-hero-buttons {
   display: flex;
 
   align-items: center;
-  justify-content: center;
+
+  gap: 13px;
+
+  margin-top: 30px;
 
   flex-wrap: wrap;
-
-  gap: 10px;
-
-  margin-top: 25px;
 }
 
-.mk-project-hero-technologies span {
+
+.mk-project-hero-buttons .mk-project-link {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
-  padding: 8px 17px;
+  gap: 9px;
 
-  color: #242228;
+  min-width: 135px;
 
-  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 20px;
 
-  border: 1px solid rgba(36, 34, 40, 0.1);
+  border-radius: 10px;
 
-  border-radius: 999px;
+  text-decoration: none;
 
-  font-size: 13px;
+  font-size: 14px;
 
   font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.mk-project-hero-buttons .live-link {
+  background: #cd41c6;
+
+  color: #111111;
+
+  box-shadow:
+    0 8px 20px rgba(201, 130, 145, 0.22);
+}
+
+
+.mk-project-hero-buttons .live-link:hover {
+  transform: translateY(-2px);
+
+  background: #36df45;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(54, 223, 69, 0.22);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.mk-project-hero-buttons .github-link {
+  background: #cd41c6;
+
+  color: #111111;
+}
+
+
+.mk-project-hero-buttons .github-link:hover {
+  transform: translateY(-2px);
+
+  background: #36df45;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(54, 223, 69, 0.22);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .mk-project-hero {
+    padding: 55px 4%;
+  }
+
+  .mk-project-hero-container {
+    gap: 40px;
+
+    padding: 42px;
+  }
+
+  .mk-project-title {
+    font-size: clamp(38px, 5vw, 55px);
+  }
+
+  .mk-project-short-description {
+    font-size: 15px;
+  }
+
+  .mk-project-hero-image img {
+    width: min(100%, 420px);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+  .mk-project-hero {
+    min-height: auto;
+
+    padding: 45px 5%;
+  }
+
+  .mk-project-hero-container {
+
+    /* Content first */
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "content"
+      "image";
+
+    gap: 42px;
+
+    padding: 35px 25px;
+
+    border-radius: 26px;
+
+    text-align: center;
+  }
+
+
+  /* Content */
+
+  .mk-project-hero-content {
+    grid-area: content;
+
+    width: 100%;
+
+    align-items: center;
+  }
+
+
+  .mk-project-short-description {
+    max-width: 500px;
+  }
+
+
+  /* Image */
+
+  .mk-project-hero-image {
+    grid-area: image;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+  }
+
+
+  .mk-project-hero-image img {
+    width: min(85vw, 360px);
+
+    aspect-ratio: 16 / 10;
+  }
+
+
+  /* Buttons */
+
+  .mk-project-hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .mk-project-hero {
+    padding: 30px 4%;
+  }
+
+  .mk-project-hero-container {
+    padding: 30px 20px;
+
+    gap: 32px;
+
+    border-radius: 22px;
+  }
+
+
+  .mk-project-title {
+    font-size: 39px;
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .mk-project-short-description {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .mk-project-hero-image img {
+    width: 82vw;
+
+    max-width: 300px;
+
+    border-width: 5px;
+
+    border-radius: 22px;
+  }
+
+
+  .mk-project-hero-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+
+  .mk-project-hero-buttons .mk-project-link {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
 }
 
 
