@@ -1449,3 +1449,6 @@
     padding: 25px;
   }
 }
+.mk-project-hero {
+  background: red !important;
+}
