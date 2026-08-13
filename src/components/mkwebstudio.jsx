@@ -36,8 +36,9 @@ function MKWebStudio() {
 
     images: [
       "/gpt10.png",
-      "/gpt11.jpg",
+      "/gpt11.png",
       "/get1.png",
+        "/gpt12.png",
     ],
   };
 
