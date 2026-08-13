@@ -49,74 +49,97 @@ function MKWebStudio() {
     <main className="mk-web-studio">
 
       {/* =========================
-          HERO
-      ========================= */}
-      <section className="mk-project-hero">
-        <motion.div
-          className="mk-project-container mk-project-hero-content"
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.7,
-            ease: "easeOut",
-          }}
-        >
-          <p className="mk-project-label">
-            PROJECT
-          </p>
+    HERO
+========================= */}
 
-          <h1 className="mk-project-title">
-            {project.title}
-          </h1>
+<section className="mk-project-hero">
 
-          <p className="mk-project-short-description">
-            {project.shortDescription}
-          </p>
-          <div className="mk-project-hero-image">
-            <img
-                src={project.heroImage}
-                alt={project.title}
-            />
-          </div>
+  <motion.div
+    className="mk-project-hero-container"
+    initial={{ opacity: 0, y: 35 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.7,
+      ease: "easeOut",
+    }}
+  >
 
-          {/* Hero Buttons */}
-          <div className="mk-project-hero-buttons">
+    {/* =========================
+        LEFT — CONTENT
+    ========================= */}
 
-            {project.liveDemo && (
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link live-link"
-              >
-                <span>
-                  Visit Live Website
-                </span>
+    <div className="mk-project-hero-content">
 
-                <FaExternalLinkAlt />
-              </a>
-            )}
+      <p className="mk-project-label">
+        PROJECT
+      </p>
 
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link github-link"
-              >
-                <FaGithub />
+      <h1 className="mk-project-title">
+        {project.title}
+      </h1>
 
-                <span>
-                  View on GitHub
-                </span>
+      <p className="mk-project-short-description">
+        {project.shortDescription}
+      </p>
 
-                <FaExternalLinkAlt />
-              </a>
-            )}
 
-          </div>
-        </motion.div>
-      </section>
+      {/* Hero Buttons */}
+
+      <div className="mk-project-hero-buttons">
+
+        {project.liveDemo && (
+          <a
+            href={project.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mk-project-link live-link"
+          >
+            <span>
+              Visit Live Website
+            </span>
+
+            <FaExternalLinkAlt />
+          </a>
+        )}
+
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mk-project-link github-link"
+          >
+            <FaGithub />
+
+            <span>
+              View on GitHub
+            </span>
+
+            <FaExternalLinkAlt />
+          </a>
+        )}
+
+      </div>
+
+    </div>
+
+
+    {/* =========================
+        RIGHT — IMAGE
+    ========================= */}
+
+    <div className="mk-project-hero-image">
+
+      <img
+        src={project.heroImage}
+        alt={project.title}
+      />
+
+    </div>
+
+  </motion.div>
+
+</section>
 
 
       {/* =========================
