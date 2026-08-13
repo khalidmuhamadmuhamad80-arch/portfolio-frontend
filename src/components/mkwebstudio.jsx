@@ -96,9 +96,9 @@ function MKWebStudio() {
             rel="noopener noreferrer"
             className="mk-project-link github-link"
           >
-            <FaGithub />
 
             <span>View on GitHub</span>
+              <FaExternalLinkAlt />
 
           </a>
         )}
