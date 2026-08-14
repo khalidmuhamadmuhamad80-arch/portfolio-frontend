@@ -485,7 +485,7 @@
    TECHNOLOGIES LIST
 ========================================= */
 .mk-project-technologies-section .mk-project-container {
-  width: min(1200px, 100%);
+  width: min(1400px, 95%);
   margin: 0 auto;
 
   display: flex;
