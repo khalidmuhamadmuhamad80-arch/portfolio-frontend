@@ -16,11 +16,6 @@
   background: #f8f6f2;
 }
 
-.mk-project-hero-container {
-  width: min(1250px, 100%);
-  padding: 60px;
-  gap: 80px;
-}
 /* =========================================
    HERO CARD
 ========================================= */
@@ -28,7 +23,7 @@
 .hero-card {
   position: relative;
 
-  width: min(1120px, 100%);
+  width: min(1400px, 100%);
 
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -174,7 +169,7 @@
 
   aspect-ratio: 1 / 1;
 
-  object-fit: cover;
+  object-fit: contain;
 
   border-radius: 28px;
 
@@ -294,93 +289,82 @@
 
 .hero-buttons {
   display: flex;
-
   align-items: center;
-
-  gap: 13px;
-
+  gap: 18px;
   margin-top: 32px;
+  flex-wrap: wrap;
 }
 
 
-/* Base Button */
+/* =========================================
+   BASE BUTTON
+========================================= */
 
 .hero-btn {
   position: relative;
 
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
-  min-width: 125px;
+  min-width: 150px;
 
-  padding: 12px 20px;
+  padding: 9px 15px;
+
+  background: #cd41c6;
 
   border-radius: 10px;
+
+  color: #000000;
 
   text-decoration: none;
 
   font-size: 14px;
-
   font-weight: 700;
+
+  white-space: nowrap;
 
   overflow: hidden;
 
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease,
     background 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
 /* =========================================
-   PRIMARY BUTTON
+   HOVER
 ========================================= */
 
-.primary-btn {
-  background:#cd41c6 ;
+.hero-btn:hover {
+  transform: scale(1.04);
 
-  color: #0fd9e1;
-
-  box-shadow:
-    0 8px 20px rgb(15 217 225);
-}
-
-
-.primary-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-
-  background: #a94fa5;
+  background: #0fd9e1;
 
   color: #000000;
 
   box-shadow:
-    0 12px 25px rgb(0 253 225);
+    0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 
 /* =========================================
-   SECONDARY BUTTON
+   PRIMARY / SECONDARY
+   Same visual style
 ========================================= */
 
+.primary-btn,
 .secondary-btn {
-  background:#cd41c6 ;
-
-  color: #111111;
+  background: #cd41c6;
+  color: #000000;
 }
 
-
+.primary-btn:hover,
 .secondary-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-
-  background:#a94fa5 ;
-
+  background: #0fd9e1;
   color: #000000;
-
-  box-shadow:
-    0 12px 25px rgb(15 217 225);
 }
 
 
