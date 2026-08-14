@@ -57,6 +57,13 @@ function Hero() {
             >
               View My Work
             </a>
+            <a
+                href="/Muhamad_Khalid_CV.pdf"
+                download className="hero-btn cv-btn"
+            >
+               Download CV
+            </a>
+
           </div>
         </div>
       </motion.div>
