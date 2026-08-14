@@ -18,9 +18,12 @@ function About() {
         </h2>
 
         <p className="about-description">
-          I'm Mohamed Khalid, a Full Stack Developer who enjoys turning ideas
-          into meaningful digital experiences. I'm always learning, building,
-          and challenging myself to grow both personally and professionally.
+           I'm Mohamed Khalid, an Egyptian Full Stack Developer with a strong interest in technology, business, and personal growth. I enjoy building things, turning ideas into valuable solutions, and constantly investing in myself through learning and experience.
+
+           For me, programming is more than a technical skill. It's a tool that allows me to create value, build opportunities, and turn ideas into real digital products. Alongside development, I'm deeply interested in business, entrepreneurship, and the process of turning skills and resources into something meaningful and valuable.
+
+           I also enjoy helping people and businesses improve their digital presence and move toward a more professional level. My journey in programming started about two years ago, and I'm still learning, building, and challenging myself every day. I see growth as a continuous journey — and I'm committed to staying on it.
+
         </p>
 
         <motion.a

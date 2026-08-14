@@ -26,6 +26,7 @@ function Skills() {
         "HTML",
         "CSS",
         "Responsive Design",
+        "React Router",
         "UI Development",
       ],
     },
@@ -36,6 +37,8 @@ function Skills() {
       skills: [
         "Problem Solving",
         "Communication",
+        "Critical Thinking",
+        "Self-Motivation",
         "Continuous Learning",
         "Attention to Detail",
         "Adaptability",
@@ -47,13 +50,15 @@ function Skills() {
       title: "Business & Professional",
       description: "Skills that help turn ideas into useful digital solutions.",
       skills: [
-        "Client Communication",
-        "Requirement Analysis",
-        "Project Planning",
-        "Time Management",
-        "Collaboration",
-        "Understanding Business Needs",
-      ],
+            "Client Communication",
+            "Requirement Analysis",
+            "Understanding Business Needs",
+            "Solution Thinking",
+            "Project Planning",
+            "Problem-to-Solution Mapping",
+            "Product Thinking", "Digital Strategy",
+      ]
+
     },
   ];
 
