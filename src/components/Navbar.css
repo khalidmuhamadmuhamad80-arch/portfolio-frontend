@@ -116,10 +116,11 @@
 
   background: #0fd9e1;
 
+  color: #000000 !important;
+  
   box-shadow:
     0 6px 18px rgb(0 0 0);
 }
-
 .nav-link:hover::after {
   transform: scaleX(1);
 }

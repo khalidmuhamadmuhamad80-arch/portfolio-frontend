@@ -16,7 +16,11 @@
   background: #f8f6f2;
 }
 
-
+.mk-project-hero-container {
+  width: min(1250px, 100%);
+  padding: 60px;
+  gap: 80px;
+}
 /* =========================================
    HERO CARD
 ========================================= */
