@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 100px 5%;
+  padding: 55px 5%;
 
   box-sizing: border-box;
 
@@ -23,7 +23,7 @@
 ========================================= */
 
 .about-container {
-  width: min(850px, 100%);
+  width: min(1100px, 100%);
 
   display: flex;
   flex-direction: column;
@@ -82,7 +82,7 @@
 ========================================= */
 
 .about-description {
-  width: min(850px, 100%);
+  width: min(1000px, 100%);
 
   margin: 28px auto 0;
 
