@@ -484,6 +484,16 @@
 /* =========================================
    TECHNOLOGIES LIST
 ========================================= */
+.mk-project-technologies-section .mk-project-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
 
 .mk-project-technologies-list {
   display: flex;
@@ -503,12 +513,7 @@
 
   box-sizing: border-box;
 }
-.mk-project-technologies-section .mk-project-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+
 
 
 /* =========================================
