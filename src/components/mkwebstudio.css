@@ -478,6 +478,10 @@
    TECHNOLOGIES SECTION
 ========================================= */
 
+/* =========================================
+   TECHNOLOGIES LIST
+========================================= */
+
 .mk-project-technologies-list {
   display: flex;
 
@@ -488,14 +492,13 @@
 
   gap: 35px 55px;
 
-  margin-top: 55px;
+  margin: 55px auto 0;
 
   padding: 35px 20px;
 
-  max-width: 1000px;
+  width: min(1050px, 100%);
 
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 }
 
 
@@ -545,6 +548,10 @@
 
 /* =========================================
    TECHNOLOGY FLOATING DELAYS
+========================================= */
+
+/* =========================================
+   RANDOM TECHNOLOGY POSITIONING
 ========================================= */
 
 .mk-project-technology:nth-child(1) {
@@ -656,7 +663,19 @@
   }
 
 }
+@media (max-width: 600px) {
+  .mk-project-technologies-list {
+    gap: 24px 18px;
 
+    padding: 25px 10px;
+
+    margin-top: 40px;
+  }
+
+  .mk-project-technology {
+    margin-top: 0 !important;
+  }
+}
 
 /* =========================================
    GALLERY
