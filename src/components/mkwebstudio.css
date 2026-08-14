@@ -564,6 +564,7 @@
    TECHNOLOGY FLOATING DELAYS
 ========================================= */
 
+
 /* =========================================
    RANDOM TECHNOLOGY POSITIONING
 ========================================= */
@@ -607,7 +608,6 @@
 .mk-project-technology:nth-child(10) {
   margin-top: -12px;
 }
-
 
 /* =========================================
    TECHNOLOGY NAME
