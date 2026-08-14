@@ -509,11 +509,17 @@
 
   padding: 35px 20px;
 
-  width: min(1300px, 195%);
+  width: min(1500px, 98%);
 
   box-sizing: border-box;
 }
-
+.mk-project-technologies-section {
+  width: 100%;
+  padding: 90px 5%;
+  background: #f8f6f2;
+  box-sizing: border-box;
+  overflow-x: hidden;   /* أضف السطر ده */
+}
 
 
 /* =========================================
@@ -570,20 +576,20 @@
 ========================================= */
 
 .mk-project-technology:nth-child(1) {
-  margin-top: 15px;
-  --tx: -18px;
+  margin-top: 20px;
+  --tx: -12px;
   --rot: -2deg;
 }
 
 .mk-project-technology:nth-child(2) {
-  margin-top: -25px;
-  --tx: 30px;
+  margin-top: -20px;
+  --tx: 18px;
   --rot: 1.5deg;
 }
 
 .mk-project-technology:nth-child(3) {
-  margin-top: 35px;
-  --tx: -10px;
+  margin-top: 30px;
+  --tx: -8px;
   --rot: -1deg;
 }
 
