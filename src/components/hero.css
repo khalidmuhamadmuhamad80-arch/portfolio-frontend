@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 70px 5%;
+  padding: 55px 5%;
   box-sizing: border-box;
 
   background: #f8f6f2;
@@ -24,6 +24,7 @@
   position: relative;
 
   width: min(1400px, 100%);
+  min-height: 600px;
 
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;

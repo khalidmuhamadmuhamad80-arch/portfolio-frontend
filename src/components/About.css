@@ -4,7 +4,7 @@
 
 .about {
   width: 100%;
-  min-height: 65vh;
+  min-height: auto;
 
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@
 ========================================= */
 
 .about-description {
-  width: min(700px, 100%);
+  width: min(850px, 100%);
 
   margin: 28px auto 0;
 
