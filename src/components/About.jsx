@@ -24,14 +24,6 @@ function About() {
 
         </p>
 
-        <motion.a
-          href="#social-media"
-          className="about-button"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.98 }}
-        >
-          Get to Know Me
-        </motion.a>
       </motion.div>
     </section>
   );
