@@ -134,7 +134,7 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 10px 25px rgba(242, 140, 91, 0.2);
+    0 10px 25px rgb(205 65 198);
 }
 
 .contact-open-button:hover svg {
@@ -189,7 +189,7 @@
 
   box-sizing: border-box;
 
-  border: 1px solid rgba(118, 103, 168, 0.2);
+  border: 1px solid rgb(15 217 225);
 
   border-radius: 24px;
 
@@ -276,7 +276,7 @@
 }
 
 .modal-close:hover {
-  background: #c98291;
+  background: #0fd9e1;
 
   color: #000000;
 

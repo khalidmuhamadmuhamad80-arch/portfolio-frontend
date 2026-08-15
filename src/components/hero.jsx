@@ -44,12 +44,6 @@ function Hero() {
 
           {/* Hero Actions */}
           <div className="hero-buttons">
-            <a
-              href="#contact"
-              className="hero-btn primary-btn"
-            >
-              Contact Me
-            </a>
 
             <a
               href="#projects"
