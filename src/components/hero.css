@@ -401,20 +401,37 @@
    MOBILE
 ========================================= */
 
-@media (max-width: 768px) {
-  .hero-card {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
+@media (max-width: 750px) {
+
+  .hero {
     min-height: auto;
-    padding: 35px 20px;
+    padding: 45px 5%;
   }
 
+  .hero-card {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    padding: 35px 25px;
+    border-radius: 26px;
+    text-align: center;
+  }
+
+  /* Content يظهر الأول */
   .hero-content {
     order: 1;
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
+  .hero-description {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Image تظهر بعده */
   .hero-image-wrapper {
     order: 2;
     width: 100%;
@@ -423,10 +440,15 @@
   }
 
   .hero-image {
-    width: 100%;
-    max-width: 280px;
+    width: min(75vw, 320px);
     height: auto;
     object-fit: contain;
+  }
+
+  /* Buttons */
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
