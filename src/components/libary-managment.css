@@ -20,7 +20,6 @@
   margin: 0 auto;
 }
 
-
 /* =========================================
    HERO SECTION
 ========================================= */
@@ -34,6 +33,7 @@
   justify-content: center;
 
   padding: 70px 5%;
+
   box-sizing: border-box;
 
   background: #f8f6f2;
@@ -44,21 +44,22 @@
    HERO CARD
 ========================================= */
 
-.mk-project-hero-content {
+.mk-project-hero-container {
   position: relative;
 
   width: min(1120px, 100%);
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
   align-items: center;
-  justify-content: center;
+
+  gap: 70px;
 
   padding: 70px 55px;
 
   box-sizing: border-box;
-
-  text-align: center;
 
   background: rgba(255, 255, 255, 0.62);
 
@@ -82,7 +83,7 @@
    HERO DECORATION
 ========================================= */
 
-.mk-project-hero-content::before {
+.mk-project-hero-container::before {
   content: "";
 
   position: absolute;
@@ -104,7 +105,8 @@
   pointer-events: none;
 }
 
-.mk-project-hero-content::after {
+
+.mk-project-hero-container::after {
   content: "";
 
   position: absolute;
@@ -124,6 +126,27 @@
   z-index: -1;
 
   pointer-events: none;
+}
+
+
+/* =========================================
+   LEFT — CONTENT
+========================================= */
+
+.mk-project-hero-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  text-align: left;
+
+  position: relative;
+
+  z-index: 1;
 }
 
 
@@ -192,7 +215,8 @@
   display: flex;
 
   align-items: center;
-  justify-content: center;
+
+  justify-content: flex-start;
 
   flex-wrap: wrap;
 
@@ -201,10 +225,12 @@
   margin-top: 25px;
 }
 
+
 .mk-project-hero-technologies span {
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   padding: 8px 17px;
@@ -231,7 +257,8 @@
   display: flex;
 
   align-items: center;
-  justify-content: center;
+
+  justify-content: flex-start;
 
   gap: 13px;
 
@@ -247,6 +274,7 @@
   display: inline-flex;
 
   align-items: center;
+
   justify-content: center;
 
   gap: 9px;
@@ -276,8 +304,11 @@
     color 0.25s ease;
 }
 
+
 .mk-project-link:hover {
-  transform: translateY(-2px) scale(1.02);
+  transform:
+    translateY(-2px)
+    scale(1.02);
 
   background: #36df45;
 
@@ -285,6 +316,117 @@
 
   box-shadow:
     0 12px 25px rgba(36, 34, 40, 0.15);
+}
+
+
+/* =========================================
+   RIGHT — HERO IMAGE
+========================================= */
+
+.mk-project-hero-image {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.mk-project-hero-image img {
+  display: block;
+
+  width: 100%;
+
+  max-width: 480px;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  border: 7px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 20px 45px rgba(36, 34, 40, 0.15);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.mk-project-hero-image:hover img {
+  transform: scale(1.015);
+
+  box-shadow:
+    0 25px 55px rgba(36, 34, 40, 0.19);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .mk-project-hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 55px 35px;
+  }
+
+  .mk-project-hero-content {
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .mk-project-hero-technologies,
+  .mk-project-hero-links {
+    justify-content: center;
+  }
+
+  .mk-project-hero-image img {
+    max-width: 500px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .mk-project-hero {
+    padding: 40px 5%;
+  }
+
+  .mk-project-hero-container {
+    padding: 45px 22px;
+
+    border-radius: 24px;
+  }
+
+  .mk-project-title {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .mk-project-hero-links {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .mk-project-link {
+    width: 100%;
+  }
+
 }
 
 

@@ -9,6 +9,7 @@ function LibraryManagement() {
 
     shortDescription:
       "A modern system for managing books and library operations.",
+    heroImage: "library1.png",
 
     description:
       "Library Management System is a web application designed to make managing books, members, and library operations easier and more organized. The project provides a simple and practical experience for managing library data efficiently.",
@@ -51,69 +52,100 @@ function LibraryManagement() {
           Hero
       ========================================= */}
 
-      <section className="mk-project-hero">
-        <motion.div
-          className="mk-project-container mk-project-hero-content"
-          initial={{ opacity: 0, y: 35 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-        >
-          <p className="mk-project-label">
-            PROJECT
-          </p>
+       <section className="mk-project-hero">
 
-          <h1 className="mk-project-title">
-            {project.title}
-          </h1>
+  <motion.div
+    className="mk-project-hero-container"
+    initial={{ opacity: 0, y: 35 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.7,
+      ease: "easeOut",
+    }}
+  >
 
-          <p className="mk-project-short-description">
-            {project.shortDescription}
-          </p>
+    {/* LEFT — CONTENT */}
 
-          {/* Technologies */}
+    <div className="mk-project-hero-content">
 
-          <div className="mk-project-hero-technologies">
-            {project.technologies.map((technology) => (
-              <span key={technology.name}>
-                {technology.name}
-              </span>
-            ))}
-          </div>
+      <p className="mk-project-label">
+        PROJECT
+      </p>
 
-          {/* Project Links */}
+      <h1 className="mk-project-title">
+        {project.title}
+      </h1>
 
-          <div className="mk-project-hero-links">
+      <p className="mk-project-short-description">
+        {project.shortDescription}
+      </p>
 
-            {project.liveDemo && (
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link"
-              >
-                <span>Visit Live Website</span>
-                <FaExternalLinkAlt />
-              </a>
-            )}
+      {/* Technologies */}
 
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link"
-              >
-                <FaGithub />
-                <span>View on GitHub</span>
-                <FaExternalLinkAlt />
-              </a>
-            )}
+      <div className="mk-project-hero-technologies">
+        {project.technologies.map((technology) => (
+          <span key={technology.name}>
+            {technology.name}
+          </span>
+        ))}
+      </div>
 
-          </div>
-        </motion.div>
-      </section>
+      {/* Project Links */}
+
+      <div className="mk-project-hero-links">
+
+        {project.liveDemo && (
+          <a
+            href={project.liveDemo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mk-project-link"
+          >
+            <span>
+              Visit Live Website
+            </span>
+
+            <FaExternalLinkAlt />
+          </a>
+        )}
+
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mk-project-link"
+          >
+            <FaGithub />
+
+            <span>
+              View on GitHub
+            </span>
+
+            <FaExternalLinkAlt />
+          </a>
+        )}
+
+      </div>
+
+    </div>
 
 
+    {/* RIGHT — PROJECT IMAGE */}
+
+    <div className="mk-project-hero-image">
+
+      <img
+        src={project.heroImage}
+        alt={project.title}
+      />
+
+    </div>
+
+  </motion.div>
+
+</section>
+      
       {/* =========================================
           Project Description
       ========================================= */}
