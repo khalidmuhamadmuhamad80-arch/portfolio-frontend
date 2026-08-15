@@ -44,8 +44,8 @@
 ========================================= */
 
 .mk-project-hero-container {
-  width: min(1400px, 100%);
-  min-height: 430px;
+  width: min(1500px, 100%);
+  min-height: 560px;
 
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -53,9 +53,9 @@
 
   align-items: center;
 
-  gap: 60px;
+  gap: 70px;
 
-  padding: 45px 60px;
+  padding: 60px 70px;
 
   box-sizing: border-box;
 
