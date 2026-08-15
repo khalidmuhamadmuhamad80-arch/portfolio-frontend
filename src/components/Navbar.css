@@ -10,9 +10,10 @@
   width: 100%;
   min-height: 78px;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 
   padding: 0 5%;
   box-sizing: border-box;
@@ -64,14 +65,9 @@
 ========================================= */
 
 .nav-links {
-  position: absolute;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
   display: flex;
   align-items: center;
+  justify-content: center;
 
   gap: 14px;
 }
@@ -132,6 +128,8 @@
 
 .nav-dropdown {
   position: relative;
+
+  justify-self: end;
 }
 
 
@@ -202,10 +200,12 @@
 
 
 /* =========================================
-   DROPDOWN MENU
+   DROPDOWN MENU  +  MOBILE MENU
+   (UNIFIED — identical shape, spacing, shadow)
 ========================================= */
 
-.dropdown-menu {
+.dropdown-menu,
+.mobile-menu {
   position: absolute;
 
   top: calc(100% + 12px);
@@ -214,34 +214,36 @@
 
   width: max-content;
 
-  min-width: 170px;
+  min-width: 210px;
 
-  padding: 12px;
+  max-width: calc(100vw - 40px);
 
-  background: rgba(255, 255, 255, 0.88);
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.92);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
   border: 1px solid rgba(36, 34, 40, 0.08);
 
-  border-radius: 16px;
+  border-radius: 18px;
 
   box-shadow:
-    0 18px 45px rgb(0 0 0);
-
-  box-sizing: border-box;
+    0 18px 45px rgba(36, 34, 40, 0.12);
 }
 
 
 /* =========================================
-   DROPDOWN SECTION
+   DROPDOWN SECTION (desktop title wrapper)
 ========================================= */
 
 .dropdown-section {
   display: flex;
   flex-direction: column;
-  align-items: center; /* بدل flex-start */
+  align-items: center;
   justify-content: center;
   gap: 10px;
   width: 100%;
@@ -268,9 +270,12 @@
 
 
 /* =========================================
-   DROPDOWN LINKS
+   DROPDOWN LINKS  +  MOBILE LINKS
+   (UNIFIED — identical size, padding, radius)
 ========================================= */
-.dropdown-link {
+
+.dropdown-link,
+.mobile-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,7 +304,8 @@
     box-shadow 0.25s ease;
 }
 
-.dropdown-link:hover {
+.dropdown-link:hover,
+.mobile-link:hover {
   transform: scale(1.04);
 
   background: #0fd9e1;
@@ -310,19 +316,18 @@
     0 5px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* Hover */
 
-.dropdown-link:hover {
-  transform: scale(1.04);
+/* =========================================
+   MOBILE MENU — links wrapper spacing
+   (mobile-menu has no title, so links need
+   the same flex/gap the dropdown-section gives)
+========================================= */
 
-  background:#0fd9e1 ;
-
-  box-shadow:
-    0 5px 14px rgb(0 0 0);
-}
-
-.dropdown-link:hover::after {
-  transform: scaleX(1);
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 
@@ -349,111 +354,25 @@
     color 0.25s ease,
     transform 0.25s ease;
 }
+
+
+/* =========================================
+   MOBILE NAV WRAPPER
+   (wraps burger button + mobile menu together)
+========================================= */
+
+.mobile-nav-wrapper {
+  display: none;
+  position: relative;
+  justify-self: end;
+}
+
+
 @media (min-width: 769px) {
   .dropdown-link {
     padding: 12px 20px;
     font-size: 15px;
   }
-}
-
-
-
-/* =========================================
-   MOBILE MENU
-========================================= */
-
-.mobile-menu {
-  position: absolute;
-
-  top: calc(100% + 12px);
-
-  right: 5%;
-
-  width: max-content;
-
-  min-width: 210px;
-
-  max-width: calc(100vw - 40px);
-
-  padding: 18px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: flex-start;
-
-  gap: 10px;
-
-  background: rgba(255, 255, 255, 0.92);
-
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  border: 1px solid rgba(36, 34, 40, 0.08);
-
-  border-radius: 18px;
-
-  box-shadow:
-    0 18px 45px rgba(36, 34, 40, 0.12);
-
-  box-sizing: border-box;
-}
-
-
-/* =========================================
-   MOBILE LINKS
-========================================= */
-
-.mobile-link {
-  position: relative;
-
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  width: max-content;
-
-  padding: 9px 13px;
-
-  background: #cd41c6;
-
-  border-radius: 9px;
-
-  color: #111111;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  font-weight: 700;
-
-  white-space: nowrap;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-/* Orange underline */
-
-
-
-.mobile-link:hover {
-  transform: scale(1.04);
-
-  background: #000000;
-
-  box-shadow:
-    0 5px 14px rgb(0 0 0);
-}
-
-.mobile-link:hover::after {
-  transform: scaleX(1);
 }
 
 
@@ -513,7 +432,8 @@
     display: none;
   }
 
-  .burger-menu {
+  .burger-menu,
+  .mobile-nav-wrapper {
     display: block;
   }
 
@@ -533,6 +453,7 @@
     font-size: 18px;
   }
 
+  .dropdown-menu,
   .mobile-menu {
     min-width: 190px;
 
