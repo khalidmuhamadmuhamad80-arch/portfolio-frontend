@@ -9,7 +9,7 @@ function LibraryManagement() {
 
     shortDescription:
       "A modern system for managing books and library operations.",
-    heroImage: "library1.png",
+    heroImage: "c5.png",
 
     description:
       "Library Management System is a web application designed to make managing books, members, and library operations easier and more organized. The project provides a simple and practical experience for managing library data efficiently.",
@@ -39,9 +39,10 @@ function LibraryManagement() {
       "https://your-library-project.vercel.app/",
 
     images: [
-      "library1.png",
-      "library2.png",
-      "library3.png",
+      "c1.png",
+      "c2.png",
+      "c3.png",
+      "c5.png",
     ],
   };
 
@@ -145,7 +146,7 @@ function LibraryManagement() {
   </motion.div>
 
 </section>
-      
+
       {/* =========================================
           Project Description
       ========================================= */}
