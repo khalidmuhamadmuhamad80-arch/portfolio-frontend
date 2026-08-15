@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 65px 5%;
+  padding: 30px 2%;
 
   box-sizing: border-box;
 
@@ -44,8 +44,8 @@
 ========================================= */
 
 .mk-project-hero-container {
-  width: min(1500px, 100%);
-  min-height: 560px;
+  width: min(1800px, 100%);
+  min-height: 800px;
 
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -694,22 +694,6 @@
    GALLERY IMAGE
 ========================================= */
 
-.mk-project-gallery-item {
-  position: relative;
-
-  overflow: hidden;
-
-  width: 100%;
-
-  background: transparent;
-
-  border: 1px solid rgba(36, 34, 40, 0.08);
-
-  border-radius: 28px;
-
-  box-shadow:
-    0 20px 50px rgba(36, 34, 40, 0.08);
-}
 
 .mk-project-gallery-item img {
   display: block;
