@@ -1,10 +1,12 @@
 
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import {FaGithub, FaExternalLinkAlt, FaArrowLeft} from "react-icons/fa";
 import "./libary-managment.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import {useNavigate} from "react-router-dom";
 function LibraryManagement() {
+    const navigate = useNavigate();
   const project = {
     title: "Library Management System",
 
@@ -46,6 +48,14 @@ function LibraryManagement() {
       ========================================= */}
 
        <section className="mk-project-hero">
+             <button
+              className="mk-back-button"
+              onClick={() => navigate(-1)}
+              aria-label="Go back"
+           >
+            <FaArrowLeft />
+            <span>Back</span>
+          </button>
 
   <motion.div
     className="mk-project-hero-container"

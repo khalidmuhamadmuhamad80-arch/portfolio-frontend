@@ -456,8 +456,8 @@
 
   padding: 11px 20px;
 
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(36, 34, 40, 0.1);
+  background: rgb(205 65 225);
+  border: 1px solid rgb(0 0 0);
   border-radius: 999px;
 
   color: #242228;
@@ -479,9 +479,9 @@
 }
 
 .mk-back-button:hover {
-  background: #cd41c6;
-  color: #ffffff;
-  border-color: #cd41c6;
+  background: #0FD9E1;
+  color: #000000;
+  border-color: #0FD9E1;
   transform: translateX(-4px);
 }
 

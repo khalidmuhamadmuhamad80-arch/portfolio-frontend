@@ -95,7 +95,7 @@
 
   background: #e8ded0;
 
-  border: 1px solid rgba(118, 103, 168, 0.12);
+  border: 1px solid rgb(0 0 0);
 
   box-shadow:
     0 12px 35px rgba(36, 34, 40, 0.07);
@@ -117,7 +117,7 @@
   border-color: #0FD9E1;
 
   box-shadow:
-    0 22px 50px rgba(118, 103, 168, 0.16);
+    0 22px 50px rgb(0 0 0);
 }
 
 
@@ -217,7 +217,7 @@
 .project-overlay-content h3 {
   margin: 0 0 12px;
 
-  color: #000000;
+  color: #ffffff;
 
   font-size: 25px;
 
@@ -248,7 +248,7 @@
 
   background: rgb(15 217 225);
 
-  color: #ffffff;
+  color: #000000;
 
   font-size: 11px;
 
