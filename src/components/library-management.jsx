@@ -2,7 +2,8 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import "./libary-managment.css";
-
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 function LibraryManagement() {
   const project = {
     title: "Library Management System",
@@ -36,6 +37,8 @@ function LibraryManagement() {
   };
 
   return (
+       <>
+        <Navbar/>
     <main className="mk-web-studio">
 
       {/* =========================================
@@ -83,7 +86,7 @@ function LibraryManagement() {
       {/* Project Links */}
 
       <div className="mk-project-hero-links">
-        
+
 
         {project.github && (
           <a
@@ -228,6 +231,9 @@ function LibraryManagement() {
       </section>
 
     </main>
+          <Footer />
+
+   </>
   );
 }
 
