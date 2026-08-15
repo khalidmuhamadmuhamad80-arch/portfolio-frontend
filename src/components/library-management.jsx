@@ -9,40 +9,29 @@ function LibraryManagement() {
 
     shortDescription:
       "A modern system for managing books and library operations.",
-    heroImage: "c5.png",
+    heroImage: "/c5.png",
 
     description:
       "Library Management System is a web application designed to make managing books, members, and library operations easier and more organized. The project provides a simple and practical experience for managing library data efficiently.",
 
     technologies: [
-      {
-        name: "Python",
-        description:
-          "Used as the main programming language to build the application logic and backend functionality.",
-      },
-      {
-        name: "Flask",
-        description:
-          "Used to build the backend, handle application routes, and provide the required web functionality.",
-      },
-      {
-        name: "SQLAlchemy",
-        description:
-          "Used to manage database operations and work with application data through an ORM.",
-      },
-    ],
+     { name: "Python" },
+     { name: "Flask" },
+     { name: "SQLAlchemy" },
+     { name: "HTML" },
+     { name: "CSS" },
+     { name: "Bootstrap" },
+],
 
     github:
       "https://github.com/your-username/library-management",
 
-    liveDemo:
-      "https://your-library-project.vercel.app/",
 
     images: [
-      "c1.png",
-      "c2.png",
-      "c3.png",
-      "c5.png",
+      "/c1.png",
+      "/c2.png",
+      "/c3.png",
+      "/c5.png",
     ],
   };
 
@@ -94,21 +83,7 @@ function LibraryManagement() {
       {/* Project Links */}
 
       <div className="mk-project-hero-links">
-
-        {project.liveDemo && (
-          <a
-            href={project.liveDemo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mk-project-link"
-          >
-            <span>
-              Visit Live Website
-            </span>
-
-            <FaExternalLinkAlt />
-          </a>
-        )}
+        
 
         {project.github && (
           <a
