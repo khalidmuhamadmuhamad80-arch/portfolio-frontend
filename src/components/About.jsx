@@ -18,11 +18,9 @@ function About() {
         </h2>
 
         <p className="about-description">
-           I'm Mohamed Khalid, an Egyptian Full Stack Developer with a strong interest in technology, business, and personal growth. I enjoy building things, turning ideas into valuable solutions, and constantly investing in myself through learning and experience.
+            I'm Mohamed Khalid, an Egyptian Full Stack Developer passionate about technology, business, and personal growth. For me, programming isn't just a technical skill — it's a tool to build real value, create opportunities, and turn ideas into working digital products.
 
-           For me, programming is more than a technical skill. It's a tool that allows me to create value, build opportunities, and turn ideas into real digital products. Alongside development, I'm deeply interested in business, entrepreneurship, and the process of turning skills and resources into something meaningful and valuable.
-
-           I also enjoy helping people and businesses improve their digital presence and move toward a more professional level. My journey in programming started about two years ago, and I'm still learning, building, and challenging myself every day. I see growth as a continuous journey — and I'm committed to staying on it.
+            Beyond development, I'm drawn to entrepreneurship and helping businesses build a stronger digital presence. My journey started two years ago, and I'm still learning, building, and pushing myself further every day.
 
         </p>
 

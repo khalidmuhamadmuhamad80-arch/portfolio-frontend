@@ -1,10 +1,12 @@
-
+import { FaArrowLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 import "./mkwebstudio.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 function MKWebStudio() {
+  const navigate = useNavigate();
+
   const project = {
     title: "MK Web Studio ",
 
@@ -49,6 +51,14 @@ function MKWebStudio() {
     <main className="mk-web-studio">
 
        <section className="mk-project-hero">
+           <button
+              className="mk-back-button"
+              onClick={() => navigate(-1)}
+              aria-label="Go back"
+           >
+            <FaArrowLeft />
+            <span>Back</span>
+          </button>
 
   <motion.div
     className="mk-project-hero-container"
@@ -85,7 +95,7 @@ function MKWebStudio() {
             className="mk-project-link live-link"
           >
             <span>Visit Live Website</span>
-            
+
           </a>
         )}
 

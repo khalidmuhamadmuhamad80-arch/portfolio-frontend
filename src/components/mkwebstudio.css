@@ -24,7 +24,7 @@
 
 .mk-project-hero {
   width: 100%;
-
+  position: relative;
   min-height: calc(100vh - 78px);
 
   display: flex;
@@ -441,7 +441,53 @@
   box-shadow:
     0 12px 25px rgba(169, 79, 165, 0.25);
 }
+/* =========================================
+   BACK BUTTON
+========================================= */
 
+.mk-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  position: absolute;
+  top: 28px;
+  left: 3%;
+
+  padding: 11px 20px;
+
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(36, 34, 40, 0.1);
+  border-radius: 999px;
+
+  color: #242228;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+
+  z-index: 5;
+}
+
+.mk-back-button:hover {
+  background: #cd41c6;
+  color: #ffffff;
+  border-color: #cd41c6;
+  transform: translateX(-4px);
+}
+
+.mk-back-button svg {
+  font-size: 13px;
+}
 /* =========================================
    GENERAL SECTIONS
 ========================================= */
@@ -1082,4 +1128,38 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* =========================================
+   BACK BUTTON — TABLET
+========================================= */
 
+@media (max-width: 950px) {
+  .mk-back-button {
+    top: 22px;
+    left: 4%;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   BACK BUTTON — MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+  .mk-back-button {
+    top: 16px;
+    left: 4%;
+    padding: 8px 14px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  .mk-back-button span {
+    display: none;   /* بيسيب أيقونة السهم بس عشان يوفر مساحة على الموبايل */
+  }
+
+  .mk-back-button svg {
+    font-size: 14px;
+  }
+}

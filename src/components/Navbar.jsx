@@ -7,6 +7,7 @@ function Navbar() {
    const [dropdownOpen, setDropdownOpen] = useState(false);
 
    const dropdownRef = useRef(null);
+   const burgerRef = useRef(null);
 
    useEffect(() => {
      const handleClickOutside = (event) => {
@@ -15,6 +16,13 @@ function Navbar() {
           !dropdownRef.current.contains(event.target)
        )  {
            setDropdownOpen(false);
+       }
+
+       if (
+          burgerRef.current &&
+          !burgerRef.current.contains(event.target)
+       )  {
+           setOpen(false);
        }
   };
 
@@ -123,38 +131,40 @@ const quickLinks = [
         </AnimatePresence>
       </div>
 
-      {/* Mobile Menu Button */}
-      <button
-        className="burger-menu"
-        onClick={() => setOpen(!open)}
-        aria-label="Open navigation menu"
-      >
-        ☰
-      </button>
+      {/* Mobile Menu Button + Menu */}
+      <div className="mobile-nav-wrapper" ref={burgerRef}>
+        <button
+          className="burger-menu"
+          onClick={() => setOpen(!open)}
+          aria-label="Open navigation menu"
+        >
+          ☰
+        </button>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            className="mobile-menu"
-            initial={{ opacity: 0, y: -15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.2 }}
-          >
-            {quickLinks.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="mobile-link"
-                onClick={() => setOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              className="mobile-menu"
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.2 }}
+            >
+              {quickLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="mobile-link"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.nav>
   );
 }
