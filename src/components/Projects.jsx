@@ -7,14 +7,14 @@ function Projects() {
     {
       id: 1,
       title: "MK Web Studio",
-      technologies: ["Django"],
+      technologies: ["Django","React"],
       image: "get1.png",
       link: "/projects/mk-web-studio",
     },
     {
       id: 2,
       title: "Library Management System",
-      technologies: ["Python", "Flask", "SQLAlchemy"],
+      technologies: ["Flask", "HTML5"],
       image: "c1.png",
       link: "/projects/library-management",
     },

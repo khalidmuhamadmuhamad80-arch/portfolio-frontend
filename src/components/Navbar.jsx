@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Navbar.css";
-
+import { FaBars } from "react-icons/fa";
 function Navbar() {
    const [open, setOpen] = useState(false);
    const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -72,11 +72,13 @@ const quickLinks = [
       <div className="nav-dropdown"
            ref={dropdownRef}
       >
-        <button
-          className="dropdown-button"
-          onClick={() => setDropdownOpen(!dropdownOpen)}
-        >
-          Explore
+      <button
+        className="dropdown-button"
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        aria-label="Open navigation menu"
+      >
+         <FaBars />
+
 
           <span
             className={
