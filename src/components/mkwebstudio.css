@@ -18,40 +18,50 @@
   margin: 0 auto;
 }
 
-
 /* =========================================
    HERO SECTION
 ========================================= */
+
 .mk-project-hero {
   width: 100%;
+
   min-height: calc(100vh - 78px);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 10px 2px;
+  padding: 5px 2%;
 
   box-sizing: border-box;
 
   background: #f8f6f2;
 }
 
-.mk-project-hero-container {
-  width: 100%;
-  max-width: 1500px;
 
-  min-height: 600px;
+/* =========================================
+   HERO CARD
+========================================= */
+
+.mk-project-hero-container {
+  position: relative;
+
+  width: min(1700px, 100%);
+
+  min-height: 800px;
 
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-areas: "content image";
+
+  grid-template-columns: 1.05fr 0.95fr;
+
+  grid-template-areas:
+    "content image";
 
   align-items: center;
 
   gap: 70px;
 
-  padding: 30px 50px;
+  padding: 75px 55px;
 
   box-sizing: border-box;
 
@@ -68,15 +78,34 @@
     0 25px 70px rgba(36, 34, 40, 0.09);
 
   overflow: hidden;
-  position: relative;
 }
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
 
 .mk-project-hero-content {
   grid-area: content;
+
+  min-width: 0;
 }
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
 
 .mk-project-hero-image {
   grid-area: image;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 

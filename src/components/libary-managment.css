@@ -19,20 +19,20 @@
   width: min(1120px, 90%);
   margin: 0 auto;
 }
-
 /* =========================================
    HERO SECTION
 ========================================= */
 
 .mk-project-hero {
   width: 100%;
+
   min-height: calc(100vh - 78px);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 70px 5%;
+  padding: 5px 2%;
 
   box-sizing: border-box;
 
@@ -47,17 +47,19 @@
 .mk-project-hero-container {
   position: relative;
 
-  width: min(1120px, 100%);
+  width: min(1700px, 100%);
+
+  min-height: 800px;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 0.95fr;
 
   align-items: center;
 
   gap: 70px;
 
-  padding: 70px 55px;
+  padding: 75px 55px;
 
   box-sizing: border-box;
 
