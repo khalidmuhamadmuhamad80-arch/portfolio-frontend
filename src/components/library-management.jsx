@@ -25,7 +25,7 @@ function LibraryManagement() {
 ],
 
     github:
-      "https://github.com/your-username/library-management",
+      "https://github.com/khalidmuhamadmuhamad80-arch/my_libary",
 
 
     images: [
@@ -72,16 +72,6 @@ function LibraryManagement() {
       <p className="mk-project-short-description">
         {project.shortDescription}
       </p>
-
-      {/* Technologies */}
-
-      <div className="mk-project-hero-technologies">
-        {project.technologies.map((technology) => (
-          <span key={technology.name}>
-            {technology.name}
-          </span>
-        ))}
-      </div>
 
       {/* Project Links */}
 

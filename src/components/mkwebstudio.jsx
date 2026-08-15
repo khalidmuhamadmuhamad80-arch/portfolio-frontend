@@ -30,7 +30,7 @@ function MKWebStudio() {
 ],
 
     github:
-      "https://github.com/your-username/mk-web-studio",
+      "https://github.com/khalidmuhamadmuhamad80-arch/mk_web_frontend",
 
     liveDemo:
       "https://mkwebstudio.vercel.app/",
