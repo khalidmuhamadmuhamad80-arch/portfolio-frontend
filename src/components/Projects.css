@@ -30,7 +30,7 @@
 .projects-label {
   margin: 0 0 14px;
 
-  color: #7667a8;
+  color: #CD41C6;
 
   font-size: 13px;
   font-weight: 800;
@@ -61,7 +61,7 @@
 
   max-width: 600px;
 
-  color: #5c5650;
+  color: #000000;
 
   font-size: 16px;
 
@@ -114,7 +114,7 @@
 .project-card:hover {
   transform: scale(1.035);
 
-  border-color: #7667a8;
+  border-color: #0FD9E1;
 
   box-shadow:
     0 22px 50px rgba(118, 103, 168, 0.16);
@@ -246,7 +246,7 @@
 
   border-radius: 7px;
 
-  background: rgba(220, 214, 247, 0.92);
+  background: rgb(205 65 198);
 
   color: #242228;
 
@@ -271,9 +271,9 @@
 
   border-radius: 9px;
 
-  background: #c98291;
+  background: #CD41C6;
 
-  color: #ffffff;
+  color: #000000;
 
   text-decoration: none;
 
@@ -304,7 +304,7 @@
 /* Button hover */
 
 .project-button:hover {
-  background: #f28c5b;
+  background: #0FD9E1;
 
   transform: translateY(-2px);
 }

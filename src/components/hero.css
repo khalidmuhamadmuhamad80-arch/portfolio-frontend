@@ -274,7 +274,7 @@
 
   margin: 22px 0 0;
 
-  color: #5c5650;
+  color: #000000;
 
   font-size: 16px;
 
@@ -342,7 +342,7 @@
 .hero-btn:hover {
   transform: scale(1.04);
 
-  background: #7667a8;
+  background: #0FD9E1;
 
   color: #000000;
 

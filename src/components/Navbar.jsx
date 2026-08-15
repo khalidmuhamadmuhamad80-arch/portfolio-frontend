@@ -13,7 +13,7 @@ const navigationLinks = [
   { name: "Skills", href: "/#skills" },
   { name: "Projects", href: "/#projects" },
   { name: "Contact", href: "/#contact" },
-  { name: "Social Media", href: "/#social-media" },
+
 ];
 
 // Dropdown links
@@ -23,7 +23,7 @@ const quickLinks = [
   { name: "Skills", href: "/#skills" },
   { name: "Projects", href: "/#projects" },
   { name: "Contact", href: "/#contact" },
-  { name: "Social Media", href: "/#social-media" },
+
 ];
 
   return (

@@ -39,7 +39,7 @@ function Footer() {
     },
     {
       icon: <FaEnvelope />,
-      url: "mailto:your@email.com",
+      url: "mailto:khalidmuhamadmuhamad80@gmail.com",
       label: "Email",
     },
   ];

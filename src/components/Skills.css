@@ -36,7 +36,7 @@
 .skills-label {
   margin: 0 0 14px;
 
-  color: #7667a8;
+  color: #CD41C6;
 
   font-size: 13px;
   font-weight: 800;
@@ -70,7 +70,7 @@
 
   margin: 25px auto 0;
 
-  color: #5c5650;
+  color: #000000;
 
   font-size: 16px;
 
@@ -129,7 +129,7 @@
 .skill-card:hover {
   transform: scale(1.025);
 
-  border-color: #7667a8;
+  border-color: #0FD9E1;
 
   box-shadow:
     0 20px 45px rgba(118, 103, 168, 0.14);
@@ -160,9 +160,9 @@
 
   border-radius: 50%;
 
-  background: #dcd6f7;
+  background: #0FD9E1;
 
-  color: #242228;
+  color: #000000;
 
   font-size: 12px;
 
@@ -198,7 +198,7 @@
 .skill-card-description {
   margin: 12px 0 25px;
 
-  color: #6b645d;
+  color: #000000;
 
   font-size: 14px;
 
@@ -254,7 +254,7 @@
 
   border-radius: 50%;
 
-  background: #c98291;
+  background: #CD41C6;
 
   transition:
     transform 0.25s ease,
@@ -269,7 +269,7 @@
 .skill-item:hover .skill-dot {
   transform: scale(1.5);
 
-  background: #f28c5b;
+  background: #0FD9E1;
 }
 
 
