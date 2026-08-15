@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
 
-  padding: 15px 5%;
+  padding: 10px 2%;
   box-sizing: border-box;
 
   background: #f8f6f2;
@@ -23,8 +23,8 @@
 .hero-card {
   position: relative;
 
-  width: min(1400px, 100%);
-  min-height: 700px;
+  width: min(1700px, 100%);
+  min-height: 750px;
 
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
