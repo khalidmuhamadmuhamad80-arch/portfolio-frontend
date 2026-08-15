@@ -1,12 +1,12 @@
 
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 import "./mkwebstudio.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 function MKWebStudio() {
   const project = {
-    title: "MK Web Studio — Digital Solutions for Modern Businesses",
+    title: "MK Web Studio ",
 
     shortDescription:
       "Digital solutions built for modern businesses.",
@@ -85,7 +85,7 @@ function MKWebStudio() {
             className="mk-project-link live-link"
           >
             <span>Visit Live Website</span>
-            <FaExternalLinkAlt />
+            
           </a>
         )}
 
@@ -98,7 +98,7 @@ function MKWebStudio() {
           >
 
             <span>View on GitHub</span>
-              <FaExternalLinkAlt />
+
 
           </a>
         )}
@@ -185,63 +185,6 @@ function MKWebStudio() {
   </motion.div>
 </section>
 
-
-      {/* =========================
-          PROJECT LINKS
-      ========================= */}
-      <section className="mk-project-links-section">
-        <motion.div
-          className="mk-project-container"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <p className="mk-project-label">
-            PROJECT LINKS
-          </p>
-
-          <h2 className="mk-project-section-title">
-            Explore the Project
-          </h2>
-
-          <div className="mk-project-links">
-
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link github-link"
-              >
-                <FaGithub />
-
-                <span>
-                  View on GitHub
-                </span>
-
-                <FaExternalLinkAlt />
-              </a>
-            )}
-
-            {project.liveDemo && (
-              <a
-                href={project.liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mk-project-link live-link"
-              >
-                <span>
-                  Visit Live Website
-                </span>
-
-                <FaExternalLinkAlt />
-              </a>
-            )}
-
-          </div>
-        </motion.div>
-      </section>
 
 
       {/* =========================
