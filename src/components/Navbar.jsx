@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Navbar.css";
 
 function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+   const [open, setOpen] = useState(false);
+   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+   const dropdownRef = useRef(null);
+
+   useEffect(() => {
+     const handleClickOutside = (event) => {
+       if (
+          dropdownRef.current &&
+          !dropdownRef.current.contains(event.target)
+       )  {
+           setDropdownOpen(false);
+       }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
 // Main navigation links
 const navigationLinks = [
@@ -50,7 +69,9 @@ const quickLinks = [
       </div>
 
       {/* Right Dropdown */}
-      <div className="nav-dropdown">
+      <div className="nav-dropdown"
+           ref={dropdownRef}
+      >
         <button
           className="dropdown-button"
           onClick={() => setDropdownOpen(!dropdownOpen)}
