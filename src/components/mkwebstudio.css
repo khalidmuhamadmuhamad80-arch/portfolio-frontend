@@ -22,7 +22,6 @@
 /* =========================================
    HERO SECTION
 ========================================= */
-
 .mk-project-hero {
   width: 100%;
   min-height: calc(100vh - 78px);
@@ -31,21 +30,18 @@
   align-items: center;
   justify-content: center;
 
-  padding: 5px 1%;
+  padding: 5px 10px;
 
   box-sizing: border-box;
 
   background: #f8f6f2;
 }
 
-
-/* =========================================
-   HERO CARD
-========================================= */
-
 .mk-project-hero-container {
-  width: min(3000px, 100%);
-  min-height: 1000px;
+  width: 100%;
+  max-width: none;
+
+  min-height: 800px;
 
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
