@@ -1163,66 +1163,35 @@
     font-size: 14px;
   }
 }
-@media (max-width: 768px) {
 
-  .mk-project-hero-container {
-    grid-template-columns: 1fr;
 
-    grid-template-areas:
-      "content"
-      "image";
+/* =========================================
+   HERO TEXT CENTERING FIX (MOBILE ONLY)
+   — forces the text inside the hero card
+     to be centered, overriding any earlier
+     conflicting rule.
+========================================= */
 
-    text-align: center;
+@media (max-width: 750px) {
+
+  .mk-project-hero-content,
+  .mk-project-hero-content * {
+    text-align: center !important;
   }
 
   .mk-project-hero-content {
-    grid-area: content;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 
-  .mk-project-label {
-    width: 100%;
-    text-align: center;
-  }
-
-  .mk-project-title {
-    width: 100%;
-    text-align: center;
-  }
-
+  .mk-project-label,
+  .mk-project-title,
   .mk-project-short-description {
-    width: 100%;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-  }
-
-  .mk-project-hero-buttons {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mk-project-hero-image {
-    grid-area: image;
-
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
