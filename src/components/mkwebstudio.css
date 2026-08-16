@@ -867,8 +867,10 @@
 
   .mk-project-hero-content {
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
 
@@ -1114,20 +1116,7 @@
     animation: none;
   }
 }
-.mk-project-hero {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding-left: 10px;
-  padding-right: 10px;
-  box-sizing: border-box;
-}
 
-.mk-project-hero-container {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  box-sizing: border-box;
-}
 /* =========================================
    BACK BUTTON — TABLET
 ========================================= */
@@ -1161,84 +1150,5 @@
 
   .mk-back-button svg {
     font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-
-  .mk-project-hero {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-
-    padding: 45px 10px;
-
-    box-sizing: border-box;
-  }
-
-  .mk-project-hero-container {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-
-    grid-template-columns: 1fr;
-
-    grid-template-areas:
-      "content"
-      "image";
-
-    gap: 42px;
-
-    padding: 35px 25px;
-
-    text-align: center;
-
-    box-sizing: border-box;
-  }
-
-  .mk-project-hero-content {
-    grid-area: content;
-
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center !important;
-    justify-content: center;
-
-    text-align: center !important;
-  }
-
-  .mk-project-label,
-  .mk-project-title,
-  .mk-project-short-description {
-    width: 100%;
-    text-align: center !important;
-  }
-
-  .mk-project-short-description {
-    max-width: 500px;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .mk-project-hero-buttons {
-    width: 100%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mk-project-hero-image {
-    grid-area: image;
-
-    width: 100%;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
   }
 }
